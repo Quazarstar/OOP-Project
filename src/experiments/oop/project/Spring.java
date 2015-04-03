@@ -43,7 +43,7 @@ public class Spring extends javax.swing.JFrame {
             }
         });
         getContentPane().add(backOlstep3);
-        backOlstep3.setBounds(0, 190, 80, 23);
+        backOlstep3.setBounds(0, 190, 80, 29);
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/experiments/oop/project/Spring.jpg"))); // NOI18N
         getContentPane().add(jLabel1);

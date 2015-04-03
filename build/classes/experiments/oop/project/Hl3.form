@@ -4,7 +4,7 @@
   <Properties>
     <Property name="defaultCloseOperation" type="int" value="3"/>
     <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-      <Dimension value="[440, 380]"/>
+      <Dimension value="[455, 415]"/>
     </Property>
   </Properties>
   <SyntheticProperties>
@@ -37,6 +37,19 @@
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
           <AbsoluteConstraints x="130" y="30" width="180" height="100"/>
+        </Constraint>
+      </Constraints>
+    </Component>
+    <Component class="javax.swing.JButton" name="imageol2">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Click to see image of experiement."/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="imageol2ActionPerformed"/>
+      </Events>
+      <Constraints>
+        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+          <AbsoluteConstraints x="110" y="350" width="230" height="-1"/>
         </Constraint>
       </Constraints>
     </Component>
@@ -102,7 +115,7 @@
             </Property>
             <Property name="lineWrap" type="boolean" value="true"/>
             <Property name="rows" type="int" value="5"/>
-            <Property name="text" type="java.lang.String" value="This is where a general description of the selectedexperiment will be displayed along with equipment required at the bottom of the description.&#xa;&#xa;Equipment required: N/A"/>
+            <Property name="text" type="java.lang.String" value="Experiment to set up a simple electric circuit; use appropriate instruments to measure current, potential difference(voltage) and resistance, and establish the relationship between them.&#xa;&#xa;Equipment required:&#xa;1.Low voltage power supply&#xa;2.Rheostat&#xa;3.Voltmeter&#xa;4.Milliammeter&#xa;5.330 &#x2126; resistor &#xa;6.Silicon diode&#xa;"/>
           </Properties>
         </Component>
       </SubComponents>

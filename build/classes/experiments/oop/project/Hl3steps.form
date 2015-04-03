@@ -70,7 +70,7 @@
             <Property name="columns" type="int" value="20"/>
             <Property name="lineWrap" type="boolean" value="true"/>
             <Property name="rows" type="int" value="5"/>
-            <Property name="text" type="java.lang.String" value="Step 1:&#xa;Step 2:&#xa;Step 3:&#xa;Step 4:&#xa;Step 5:&#xa;Step 6:&#xa;Step 7:&#xa;Step 8:&#xa;Step 9:&#xa;Step 10:&#xa;step 11:&#xa;step 12:&#xa;step 13:"/>
+            <Property name="text" type="java.lang.String" value="1.Set up the circuit as shown.&#xa;2.&#xa; Note the current (I) and potential difference (V).3.Adjust the variable resistor (rheostat) to get a new set of values.4.Repeat about 6 times and then plot a graph of potentialdifference against current.5.Record the results in a table and then draw a graph of  potential difference against current.&#xa;Result&#xa;The fact that we get a straight line through the origin shows that&#xa;the potential difference is&#xa;directly proportional &#xa;to the current&#xa;(this means that if we double the potential difference, the currentwill double also)"/>
           </Properties>
         </Component>
       </SubComponents>

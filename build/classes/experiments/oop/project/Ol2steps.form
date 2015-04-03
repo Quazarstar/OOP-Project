@@ -83,7 +83,7 @@
             <Property name="columns" type="int" value="20"/>
             <Property name="lineWrap" type="boolean" value="true"/>
             <Property name="rows" type="int" value="5"/>
-            <Property name="text" type="java.lang.String" value="Step 1:&#xa;Step 2:&#xa;Step 3:&#xa;Step 4:&#xa;Step 5:&#xa;Step 6:&#xa;Step 7:&#xa;Step 8:&#xa;Step 9:&#xa;Step 10:&#xa;step 11:&#xa;step 12:&#xa;step 13:"/>
+            <Property name="text" type="java.lang.String" value="1.Put substances in test tubes (they must be dissolved in water if they arenot a liquid).&#xa;2.Pour in a few drops of universal indicator and shake well (the colour will change according to how acidic or basic the substance is).&#xa;3.Use the pH scale to write up results.&#xa;Results: The water or substance should turn different colors based on the PH Scale. More towards red pigments for acids and more towards purple blue for base."/>
           </Properties>
         </Component>
       </SubComponents>

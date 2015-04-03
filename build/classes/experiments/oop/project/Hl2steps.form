@@ -83,7 +83,7 @@
             <Property name="columns" type="int" value="20"/>
             <Property name="lineWrap" type="boolean" value="true"/>
             <Property name="rows" type="int" value="5"/>
-            <Property name="text" type="java.lang.String" value="Step 1:&#xa;Step 2:&#xa;Step 3:&#xa;Step 4:&#xa;Step 5:&#xa;Step 6:&#xa;Step 7:&#xa;Step 8:&#xa;Step 9:&#xa;Step 10:&#xa;step 11:&#xa;step 12:&#xa;step 13:"/>
+            <Property name="text" type="java.lang.String" value="1. Set up the equipment like in the image provided.&#xa;2.Carefully pour the solution into the conical flask &#x2013; the water will flow through,leaving just the soil behind. &#xa;Note: that the disadvantage with this method is that you don&#x2019;t get to keep the liquid, only the solid."/>
           </Properties>
         </Component>
       </SubComponents>
