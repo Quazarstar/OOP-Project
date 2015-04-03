@@ -65,7 +65,7 @@ public class Ol3steps extends javax.swing.JFrame {
         stepsareaol3.setColumns(20);
         stepsareaol3.setLineWrap(true);
         stepsareaol3.setRows(5);
-        stepsareaol3.setText("Step 1:\nStep 2:\nStep 3:\nStep 4:\nStep 5:\nStep 6:\nStep 7:\nStep 8:\nStep 9:\nStep 10:\nstep 11:\nstep 12:\nstep 13:");
+        stepsareaol3.setText("1.Use a newton-meter to stretch a spring (or hang weights from the spring as shown).\n2.Note the extension and the force used and record the results in a table.\n3.Repeat for lot of different forces.\n4.Plot a graph of force used against extension.\nResult: You should get the graph on a straight line");
         jScrollPane1.setViewportView(stepsareaol3);
 
         getContentPane().add(jScrollPane1);

@@ -65,7 +65,7 @@ public class Ol2steps extends javax.swing.JFrame {
         stepsareaol2.setColumns(20);
         stepsareaol2.setLineWrap(true);
         stepsareaol2.setRows(5);
-        stepsareaol2.setText("Step 1:\nStep 2:\nStep 3:\nStep 4:\nStep 5:\nStep 6:\nStep 7:\nStep 8:\nStep 9:\nStep 10:\nstep 11:\nstep 12:\nstep 13:");
+        stepsareaol2.setText("1.Put substances in test tubes (they must be dissolved in water if they arenot a liquid).\n2.Pour in a few drops of universal indicator and shake well (the colour will change according to how acidic or basic the substance is).\n3.Use the pH scale to write up results.\nResults: The water or substance should turn different colors based on the PH Scale. More towards red pigments for acids and more towards purple blue for base.");
         jScrollPane1.setViewportView(stepsareaol2);
 
         getContentPane().add(jScrollPane1);

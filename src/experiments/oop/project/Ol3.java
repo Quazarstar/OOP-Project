@@ -30,6 +30,7 @@ public class Ol3 extends javax.swing.JFrame {
         placeholderol3 = new javax.swing.JLabel();
         backOl3 = new javax.swing.JButton();
         homeButtonOL3 = new javax.swing.JButton();
+        imageol2 = new javax.swing.JButton();
         stepsOl3 = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         textOl3 = new javax.swing.JTextArea();
@@ -63,6 +64,15 @@ public class Ol3 extends javax.swing.JFrame {
         getContentPane().add(homeButtonOL3);
         homeButtonOL3.setBounds(0, 20, 80, 23);
 
+        imageol2.setText("Click to see image of experiement.");
+        imageol2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                imageol2ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(imageol2);
+        imageol2.setBounds(110, 350, 230, 23);
+
         stepsOl3.setText("Steps");
         stepsOl3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -78,7 +88,7 @@ public class Ol3 extends javax.swing.JFrame {
         textOl3.setFont(new java.awt.Font("Monospaced", 0, 14)); // NOI18N
         textOl3.setLineWrap(true);
         textOl3.setRows(5);
-        textOl3.setText("This is where a general description of the selectedexperiment will be displayed along with equipment required at the bottom of the description.\n\nEquipment required: N/A");
+        textOl3.setText("Investigate the relationship between the extension of a spring and the applied force.\n\nEquipment required.\n1. Newton-meter or weights\n2. Ruler\n3. Spring\n4. Metal bar.");
         jScrollPane1.setViewportView(textOl3);
 
         getContentPane().add(jScrollPane1);
@@ -119,6 +129,12 @@ public class Ol3 extends javax.swing.JFrame {
         myOl3steps.setVisible(true);
         dispose();
     }//GEN-LAST:event_stepsOl3ActionPerformed
+
+    private void imageol2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_imageol2ActionPerformed
+        Spring mySpring = new Spring();
+        mySpring.setVisible(true);
+        dispose();
+    }//GEN-LAST:event_imageol2ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -161,6 +177,7 @@ public class Ol3 extends javax.swing.JFrame {
     private javax.swing.JLabel backgroundOl3;
     private javax.swing.JLabel descOl3;
     private javax.swing.JButton homeButtonOL3;
+    private javax.swing.JButton imageol2;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JLabel placeholderol3;
     private javax.swing.JButton stepsOl3;

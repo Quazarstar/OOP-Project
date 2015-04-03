@@ -61,7 +61,7 @@ public class Hl2steps extends javax.swing.JFrame {
         stepsarea2.setColumns(20);
         stepsarea2.setLineWrap(true);
         stepsarea2.setRows(5);
-        stepsarea2.setText("Step 1:\nStep 2:\nStep 3:\nStep 4:\nStep 5:\nStep 6:\nStep 7:\nStep 8:\nStep 9:\nStep 10:\nstep 11:\nstep 12:\nstep 13:");
+        stepsarea2.setText("1. Set up the equipment like in the image provided.\n2.Carefully pour the solution into the conical flask – the water will flow through,leaving just the soil behind. \nNote: that the disadvantage with this method is that you don’t get to keep the liquid, only the solid.");
         jScrollPane1.setViewportView(stepsarea2);
 
         getContentPane().add(jScrollPane1);

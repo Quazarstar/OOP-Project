@@ -84,7 +84,7 @@
             <Property name="columns" type="int" value="20"/>
             <Property name="lineWrap" type="boolean" value="true"/>
             <Property name="rows" type="int" value="5"/>
-            <Property name="text" type="java.lang.String" value="Step 1:&#xa;Step 2:&#xa;Step 3:&#xa;Step 4:&#xa;Step 5:&#xa;Step 6:&#xa;Step 7:&#xa;Step 8:&#xa;Step 9:&#xa;Step 10:&#xa;step 11:&#xa;step 12:&#xa;step 13:"/>
+            <Property name="text" type="java.lang.String" value="1.Add some saliva (which contains the amylase enzyme) to a starch solution which is in a test tube.&#xa;2.Confirm beforehand that the substrate is starch by adding iodine to it &#x2013; it should turn blue/black.&#xa;3.Heat in a water bath at 37 degrees C for 10 minutes.&#xa;4.The starch should now be converted to a simple sugar product called maltose so we need to test for this.Add some Benedict&#x2019;s solution and place in boiling water for a few minutes.&#xa;Result: The contents of the test-tube should turn red, indicating that sugar is present."/>
           </Properties>
         </Component>
       </SubComponents>

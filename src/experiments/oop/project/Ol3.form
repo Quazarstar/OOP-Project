@@ -66,6 +66,19 @@
         </Constraint>
       </Constraints>
     </Component>
+    <Component class="javax.swing.JButton" name="imageol2">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Click to see image of experiement."/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="imageol2ActionPerformed"/>
+      </Events>
+      <Constraints>
+        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+          <AbsoluteConstraints x="110" y="350" width="230" height="-1"/>
+        </Constraint>
+      </Constraints>
+    </Component>
     <Component class="javax.swing.JButton" name="stepsOl3">
       <Properties>
         <Property name="text" type="java.lang.String" value="Steps"/>
@@ -102,7 +115,7 @@
             </Property>
             <Property name="lineWrap" type="boolean" value="true"/>
             <Property name="rows" type="int" value="5"/>
-            <Property name="text" type="java.lang.String" value="This is where a general description of the selectedexperiment will be displayed along with equipment required at the bottom of the description.&#xa;&#xa;Equipment required: N/A"/>
+            <Property name="text" type="java.lang.String" value="Investigate the relationship between the extension of a spring and the applied force.&#xa;&#xa;Equipment required.&#xa;1. Newton-meter or weights&#xa;2. Ruler&#xa;3. Spring&#xa;4. Metal bar."/>
           </Properties>
         </Component>
       </SubComponents>

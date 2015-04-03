@@ -28,6 +28,7 @@ public class Hl3 extends javax.swing.JFrame {
     private void initComponents() {
 
         hl3placeholder = new javax.swing.JLabel();
+        imageol2 = new javax.swing.JButton();
         backEx3 = new javax.swing.JButton();
         Hl3desc = new javax.swing.JLabel();
         hl3steps = new javax.swing.JButton();
@@ -38,12 +39,21 @@ public class Hl3 extends javax.swing.JFrame {
         backgroundEx3 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setMinimumSize(new java.awt.Dimension(440, 380));
+        setMinimumSize(new java.awt.Dimension(455, 415));
         getContentPane().setLayout(null);
 
         hl3placeholder.setIcon(new javax.swing.ImageIcon(getClass().getResource("/experiments/oop/project/art4098_1.jpg"))); // NOI18N
         getContentPane().add(hl3placeholder);
         hl3placeholder.setBounds(130, 30, 180, 100);
+
+        imageol2.setText("Click to see image of experiement.");
+        imageol2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                imageol2ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(imageol2);
+        imageol2.setBounds(110, 350, 230, 23);
 
         backEx3.setText("Back");
         backEx3.addActionListener(new java.awt.event.ActionListener() {
@@ -74,7 +84,7 @@ public class Hl3 extends javax.swing.JFrame {
         hl3text.setFont(new java.awt.Font("Monospaced", 0, 14)); // NOI18N
         hl3text.setLineWrap(true);
         hl3text.setRows(5);
-        hl3text.setText("This is where a general description of the selectedexperiment will be displayed along with equipment required at the bottom of the description.\n\nEquipment required: N/A");
+        hl3text.setText("Experiment to set up a simple electric circuit; use appropriate instruments to measure current, potential difference(voltage) and resistance, and establish the relationship between them.\n\nEquipment required:\n1.Low voltage power supply\n2.Rheostat\n3.Voltmeter\n4.Milliammeter\n5.330 Ω resistor \n6.Silicon diode\n");
         jScrollPane1.setViewportView(hl3text);
 
         getContentPane().add(jScrollPane1);
@@ -120,6 +130,12 @@ public class Hl3 extends javax.swing.JFrame {
         dispose();         // TODO add your handling code here:
     }//GEN-LAST:event_homeButtonHLActionPerformed
 
+    private void imageol2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_imageol2ActionPerformed
+        circuit myCircuit = new circuit();
+        myCircuit.setVisible(true);
+        dispose();
+    }//GEN-LAST:event_imageol2ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -164,6 +180,7 @@ public class Hl3 extends javax.swing.JFrame {
     private javax.swing.JButton hl3steps;
     private javax.swing.JTextArea hl3text;
     private javax.swing.JButton homeButtonHL;
+    private javax.swing.JButton imageol2;
     private javax.swing.JScrollPane jScrollPane1;
     // End of variables declaration//GEN-END:variables
 }

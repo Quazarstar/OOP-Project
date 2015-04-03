@@ -28,6 +28,7 @@ public class Hl2 extends javax.swing.JFrame {
     private void initComponents() {
 
         backEx2 = new javax.swing.JButton();
+        imageol2 = new javax.swing.JButton();
         hl2placeholder = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         hl2text = new javax.swing.JTextArea();
@@ -50,6 +51,15 @@ public class Hl2 extends javax.swing.JFrame {
         getContentPane().add(backEx2);
         backEx2.setBounds(0, 0, 80, 23);
 
+        imageol2.setText("Click to see image of experiement.");
+        imageol2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                imageol2ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(imageol2);
+        imageol2.setBounds(110, 350, 230, 23);
+
         hl2placeholder.setIcon(new javax.swing.ImageIcon(getClass().getResource("/experiments/oop/project/art4098_1.jpg"))); // NOI18N
         getContentPane().add(hl2placeholder);
         hl2placeholder.setBounds(130, 30, 180, 100);
@@ -60,7 +70,7 @@ public class Hl2 extends javax.swing.JFrame {
         hl2text.setFont(new java.awt.Font("Monospaced", 0, 14)); // NOI18N
         hl2text.setLineWrap(true);
         hl2text.setRows(5);
-        hl2text.setText("This is where a general description of the selectedexperiment will be displayed along with equipment required at the bottom of the description.\n\nEquipment required: N/A");
+        hl2text.setText("Experiment to separate mixtures using filtration.\n\nEquipment required.\n1. Beaker\n2. A funnel\n3. Filter paper\n4. A stand\n5. Any mixture of a solid and liquid. \n");
         jScrollPane1.setViewportView(hl2text);
 
         getContentPane().add(jScrollPane1);
@@ -120,6 +130,12 @@ public class Hl2 extends javax.swing.JFrame {
         dispose();         // TODO add your handling code here:
     }//GEN-LAST:event_homeButtonHLActionPerformed
 
+    private void imageol2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_imageol2ActionPerformed
+        Filtration myFiltration = new Filtration();
+        myFiltration.setVisible(true);
+        dispose();
+    }//GEN-LAST:event_imageol2ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -164,6 +180,7 @@ public class Hl2 extends javax.swing.JFrame {
     private javax.swing.JButton hl2steps;
     private javax.swing.JTextArea hl2text;
     private javax.swing.JButton homeButtonHL;
+    private javax.swing.JButton imageol2;
     private javax.swing.JScrollPane jScrollPane1;
     // End of variables declaration//GEN-END:variables
 }

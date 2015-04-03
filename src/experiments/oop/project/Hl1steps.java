@@ -56,7 +56,7 @@ public class Hl1steps extends javax.swing.JFrame {
         stepsarea1.setColumns(20);
         stepsarea1.setLineWrap(true);
         stepsarea1.setRows(5);
-        stepsarea1.setText("Step 1:\nStep 2:\nStep 3:\nStep 4:\nStep 5:\nStep 6:\nStep 7:\nStep 8:\nStep 9:\nStep 10:\nstep 11:\nstep 12:\nstep 13:");
+        stepsarea1.setText("1. Label a piece of brown paper (or filter paper) as fat.\n2. Place a small piece of butter or cooking oil on the paper\n3. Rub the paper after folding it over.\n4. Repeat this process using a few drops of water on another piece of paper labelled \"water\". (This acts as a control.)\n5. Leave the two pieces of paper over a radiator or heat source to dry.\n6. The butter or fat will produce a permanent stain on the paper, where as the water will not.");
         jScrollPane1.setViewportView(stepsarea1);
 
         getContentPane().add(jScrollPane1);

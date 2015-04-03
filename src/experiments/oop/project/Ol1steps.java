@@ -66,7 +66,7 @@ public class Ol1steps extends javax.swing.JFrame {
         stepsareaol1.setColumns(20);
         stepsareaol1.setLineWrap(true);
         stepsareaol1.setRows(5);
-        stepsareaol1.setText("Step 1:\nStep 2:\nStep 3:\nStep 4:\nStep 5:\nStep 6:\nStep 7:\nStep 8:\nStep 9:\nStep 10:\nstep 11:\nstep 12:\nstep 13:");
+        stepsareaol1.setText("1.Add some saliva (which contains the amylase enzyme) to a starch solution which is in a test tube.\n2.Confirm beforehand that the substrate is starch by adding iodine to it – it should turn blue/black.\n3.Heat in a water bath at 37 degrees C for 10 minutes.\n4.The starch should now be converted to a simple sugar product called maltose so we need to test for this.Add some Benedict’s solution and place in boiling water for a few minutes.\nResult: The contents of the test-tube should turn red, indicating that sugar is present.");
         jScrollPane1.setViewportView(stepsareaol1);
 
         getContentPane().add(jScrollPane1);

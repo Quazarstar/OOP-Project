@@ -83,7 +83,7 @@
             <Property name="columns" type="int" value="20"/>
             <Property name="lineWrap" type="boolean" value="true"/>
             <Property name="rows" type="int" value="5"/>
-            <Property name="text" type="java.lang.String" value="Step 1:&#xa;Step 2:&#xa;Step 3:&#xa;Step 4:&#xa;Step 5:&#xa;Step 6:&#xa;Step 7:&#xa;Step 8:&#xa;Step 9:&#xa;Step 10:&#xa;step 11:&#xa;step 12:&#xa;step 13:"/>
+            <Property name="text" type="java.lang.String" value="1.Use a newton-meter to stretch a spring (or hang weights from the spring as shown).&#xa;2.Note the extension and the force used and record the results in a table.&#xa;3.Repeat for lot of different forces.&#xa;4.Plot a graph of force used against extension.&#xa;Result: You should get the graph on a straight line"/>
           </Properties>
         </Component>
       </SubComponents>

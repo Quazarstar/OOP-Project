@@ -28,6 +28,7 @@ public class Hl1 extends javax.swing.JFrame {
     private void initComponents() {
 
         homeButtonHL = new javax.swing.JButton();
+        imageol2 = new javax.swing.JButton();
         hl1placeholder = new javax.swing.JLabel();
         backEx1 = new javax.swing.JButton();
         hl1steps = new javax.swing.JButton();
@@ -49,6 +50,15 @@ public class Hl1 extends javax.swing.JFrame {
         });
         getContentPane().add(homeButtonHL);
         homeButtonHL.setBounds(0, 20, 80, 23);
+
+        imageol2.setText("Click to see image of experiement.");
+        imageol2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                imageol2ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(imageol2);
+        imageol2.setBounds(110, 350, 230, 23);
 
         hl1placeholder.setIcon(new javax.swing.ImageIcon(getClass().getResource("/experiments/oop/project/art4098_1.jpg"))); // NOI18N
         getContentPane().add(hl1placeholder);
@@ -83,7 +93,7 @@ public class Hl1 extends javax.swing.JFrame {
         hl1text.setFont(new java.awt.Font("Monospaced", 0, 14)); // NOI18N
         hl1text.setLineWrap(true);
         hl1text.setRows(5);
-        hl1text.setText("This is where a general description of the selectedexperiment will be displayed along with equipment required at the bottom of the description.\n\nEquipment required: N/A");
+        hl1text.setText("Experiment to test for fat.\n\nEquipment required:\n1. Brown paper or filter paper\n2. Butter\n3. Water\n4. Warm heat source.");
         jScrollPane1.setViewportView(hl1text);
 
         getContentPane().add(jScrollPane1);
@@ -119,6 +129,12 @@ public class Hl1 extends javax.swing.JFrame {
         myMainMenu.setVisible(true);
         dispose();        // TODO add your handling code here:
     }//GEN-LAST:event_homeButtonHLActionPerformed
+
+    private void imageol2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_imageol2ActionPerformed
+        Fat myFat = new Fat();
+        myFat.setVisible(true);
+        dispose();
+    }//GEN-LAST:event_imageol2ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -165,6 +181,7 @@ public class Hl1 extends javax.swing.JFrame {
     private javax.swing.JButton hl1steps;
     private javax.swing.JTextArea hl1text;
     private javax.swing.JButton homeButtonHL;
+    private javax.swing.JButton imageol2;
     private javax.swing.JScrollPane jScrollPane1;
     // End of variables declaration//GEN-END:variables
 }

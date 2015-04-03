@@ -30,6 +30,7 @@ public class Ol2 extends javax.swing.JFrame {
         placeholderol2 = new javax.swing.JLabel();
         backOl2 = new javax.swing.JButton();
         homeButtonOL2 = new javax.swing.JButton();
+        imageol2 = new javax.swing.JButton();
         stepsOl2 = new javax.swing.JButton();
         descOl2 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
@@ -63,6 +64,15 @@ public class Ol2 extends javax.swing.JFrame {
         getContentPane().add(homeButtonOL2);
         homeButtonOL2.setBounds(0, 20, 80, 23);
 
+        imageol2.setText("Click to see image of experiement.");
+        imageol2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                imageol2ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(imageol2);
+        imageol2.setBounds(110, 350, 230, 23);
+
         stepsOl2.setText("Steps");
         stepsOl2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -83,7 +93,7 @@ public class Ol2 extends javax.swing.JFrame {
         textOl2.setFont(new java.awt.Font("Monospaced", 0, 14)); // NOI18N
         textOl2.setLineWrap(true);
         textOl2.setRows(5);
-        textOl2.setText("This is where a general description of the selectedexperiment will be displayed along with equipment required at the bottom of the description.\n\nEquipment required: N/A");
+        textOl2.setText("Investigate the pH of a variety of materials using the pH scale.\n\nEquipment required:\n1. Test tube rack. \n2. Lemon juice or fizzy drinks for acids.\n3. Bread soda or toothpaste for bases.\n4. Four test tubes\n5. Water");
         jScrollPane1.setViewportView(textOl2);
 
         getContentPane().add(jScrollPane1);
@@ -119,6 +129,13 @@ public class Ol2 extends javax.swing.JFrame {
         myOl2steps.setVisible(true);
         dispose();
     }//GEN-LAST:event_stepsOl2ActionPerformed
+
+    private void imageol2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_imageol2ActionPerformed
+        PH myPH = new PH();
+        myPH.setVisible(true);
+        dispose();
+
+    }//GEN-LAST:event_imageol2ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -161,6 +178,7 @@ public class Ol2 extends javax.swing.JFrame {
     private javax.swing.JLabel backgroundOl2;
     private javax.swing.JLabel descOl2;
     private javax.swing.JButton homeButtonOL2;
+    private javax.swing.JButton imageol2;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JLabel placeholderol2;
     private javax.swing.JButton stepsOl2;
