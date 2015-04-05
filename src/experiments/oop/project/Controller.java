@@ -32,8 +32,21 @@ public class Controller {
         }
     
     public void setArea(String area){
-    this.area = area;
+        this.area = area;
     }
+    
+    public String getCycle(){
+        return cycle;
+    }
+    
+    public String getSubect(){
+        return subject;
+    }
+    
+    public String getArea(){
+        return area;
+    }
+   
     
     public void writeCycle(){
         try{

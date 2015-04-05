@@ -106,18 +106,32 @@ public class MainMenu extends javax.swing.JFrame {
     }//GEN-LAST:event_toFirstHomeButtonActionPerformed
 
     private void equipmentButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_equipmentButtonActionPerformed
+        Controller myC = new Controller();
+        myC.setArea("Equipment");
+        myC.writeArea();
+        
+        
+        
         MainFrame myMainFrame = new MainFrame();
         myMainFrame.setVisible(true);
         dispose();
     }//GEN-LAST:event_equipmentButtonActionPerformed
 
     private void experimentsButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_experimentsButtonActionPerformed
+        Controller myC = new Controller();
+        myC.setArea("Experiments");
+        myC.writeArea();
+        
         OOProjectExperimentsMain OOProjectExperimentsMain = new OOProjectExperimentsMain();
         OOProjectExperimentsMain.setVisible(true);
         dispose();
     }//GEN-LAST:event_experimentsButtonActionPerformed
 
     private void questionsButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_questionsButtonActionPerformed
+        Controller myC = new Controller();
+        myC.setArea("Questions");
+        myC.writeArea();
+        
         FormAndQsGUI myMain = new FormAndQsGUI();
         myMain.setVisible(true);
         dispose();
