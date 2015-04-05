@@ -9,12 +9,24 @@ package experiments.oop.project;
  *
  * @author x14435708
  */
-public class BioQs extends javax.swing.JFrame {
+import experiments.oop.project.BioPg;
+import experiments.oop.project.Question;
+import java.util.ArrayList;
+import javax.swing.JOptionPane;
 
+public class BioQs extends javax.swing.JFrame {
+private ArrayList <Question> Bqlist;
+private String Banswer;
+private int BACount;
     /**
      * Creates new form BioQs
      */
+    Question a = new Question();
     public BioQs() {
+        Bqlist = new ArrayList <>();
+        Banswer = new String();
+        BACount = 0;
+       
         initComponents();
     }
 
@@ -27,17 +39,14 @@ public class BioQs extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        pictureButtons = new javax.swing.ButtonGroup();
         back = new javax.swing.JButton();
-        picturebutton1 = new javax.swing.JRadioButton();
-        picturebutton2 = new javax.swing.JRadioButton();
-        picturebutton3 = new javax.swing.JRadioButton();
-        jTextField2 = new javax.swing.JTextField();
-        jButton1 = new javax.swing.JButton();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        background = new javax.swing.JLabel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        BAfield = new javax.swing.JTextArea();
+        Bnextq = new javax.swing.JButton();
+        Bsubmit = new javax.swing.JButton();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        bqField = new javax.swing.JTextArea();
+        DisplayAnsB = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMinimumSize(new java.awt.Dimension(455, 415));
@@ -50,57 +59,52 @@ public class BioQs extends javax.swing.JFrame {
             }
         });
         getContentPane().add(back);
-        back.setBounds(0, 0, 55, 23);
+        back.setBounds(0, 0, 57, 23);
 
-        pictureButtons.add(picturebutton1);
-        picturebutton1.setText("Pic1");
-        getContentPane().add(picturebutton1);
-        picturebutton1.setBounds(40, 90, 70, 23);
+        BAfield.setColumns(20);
+        BAfield.setRows(5);
+        BAfield.setText("Please enter answer here!");
+        jScrollPane1.setViewportView(BAfield);
 
-        pictureButtons.add(picturebutton2);
-        picturebutton2.setText("Pic2");
-        getContentPane().add(picturebutton2);
-        picturebutton2.setBounds(200, 90, 60, 23);
+        getContentPane().add(jScrollPane1);
+        jScrollPane1.setBounds(90, 160, 340, 100);
 
-        pictureButtons.add(picturebutton3);
-        picturebutton3.setText("Pic3");
-        getContentPane().add(picturebutton3);
-        picturebutton3.setBounds(330, 90, 70, 23);
-
-        jTextField2.setEditable(false);
-        jTextField2.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        jTextField2.setText("Select the picture representing photosynthesis.");
-        getContentPane().add(jTextField2);
-        jTextField2.setBounds(4, 48, 450, 28);
-
-        jButton1.setText("Display correct answer.");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        Bnextq.setText("next");
+        Bnextq.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                BnextqActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton1);
-        jButton1.setBounds(160, 320, 160, 23);
+        getContentPane().add(Bnextq);
+        Bnextq.setBounds(370, 360, 57, 23);
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/experiments/oop/project/110px-Photosynthesis-hy.gif"))); // NOI18N
-        jLabel1.setText("jLabel1");
-        getContentPane().add(jLabel1);
-        jLabel1.setBounds(10, 140, 110, 153);
+        Bsubmit.setText("submit");
+        Bsubmit.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BsubmitActionPerformed(evt);
+            }
+        });
+        getContentPane().add(Bsubmit);
+        Bsubmit.setBounds(210, 270, 90, 23);
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/experiments/oop/project/art4098_1.jpg"))); // NOI18N
-        jLabel2.setText("jLabel2");
-        getContentPane().add(jLabel2);
-        jLabel2.setBounds(140, 140, 180, 150);
+        bqField.setEditable(false);
+        bqField.setColumns(20);
+        bqField.setFont(new java.awt.Font("Monospaced", 1, 14)); // NOI18N
+        bqField.setRows(5);
+        bqField.setText("question 1: where do plants get their \ngreen color");
+        jScrollPane2.setViewportView(bqField);
 
-        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/experiments/oop/project/quimica.jpg"))); // NOI18N
-        jLabel3.setText("jLabel3");
-        getContentPane().add(jLabel3);
-        jLabel3.setBounds(330, 160, 120, 110);
+        getContentPane().add(jScrollPane2);
+        jScrollPane2.setBounds(90, 20, 340, 120);
 
-        background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/experiments/oop/project/6805727-plain-backgrounds.jpg"))); // NOI18N
-        background.setText("jLabel1");
-        getContentPane().add(background);
-        background.setBounds(0, 0, 455, 415);
+        DisplayAnsB.setText("Display answers ");
+        DisplayAnsB.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                DisplayAnsBActionPerformed(evt);
+            }
+        });
+        getContentPane().add(DisplayAnsB);
+        DisplayAnsB.setBounds(190, 320, 130, 23);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -111,12 +115,51 @@ public class BioQs extends javax.swing.JFrame {
         myBioPg.setVisible(true);
         dispose();
     }//GEN-LAST:event_backActionPerformed
+int nextBio = 0;
+    private void BnextqActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BnextqActionPerformed
+        // TODO add your handling code here:
+        nextBio++;
+        int Bcount = 0;
+while(Bcount <= nextBio){
+    if(nextBio==1){
+        Bnextq.setVisible(false);
+    bqField.setText("Question 2:complete the sentence"
+            + "\n The molecules are moved and \n converted in the area are \n" +
+"called the _______");
+    }
+Bcount++;
+}
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        bioQans mybioQans = new bioQans();
-        mybioQans.setVisible(true);
-        dispose();// TODO add your handling code here:
-    }//GEN-LAST:event_jButton1ActionPerformed
+        
+    }//GEN-LAST:event_BnextqActionPerformed
+
+    private void BsubmitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BsubmitActionPerformed
+        // get text from text field
+        Banswer = BAfield.getText();
+        
+        Question q = new Question();
+        q.setAnswer(Banswer);
+        
+        //add object to arraylist
+        Bqlist.add(q);
+        
+        BACount++;
+    }//GEN-LAST:event_BsubmitActionPerformed
+
+    private void DisplayAnsBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DisplayAnsBActionPerformed
+        // TODO add your handling code here:
+        int number = 0;
+        
+        String Correct[] = new String[2];
+        Correct[0]= " The correct answer is chloroplast";
+        Correct[1]= " The correct answer is stroma";
+       // for(int j=0;j<Correct.length;j++){
+        for(int i = 0; i < Bqlist.size();i++){
+            number++;
+            JOptionPane.showMessageDialog(null,"for question "+number+" your answer is: "+ Bqlist.get(i).getAnswer()+Correct[i]);
+        }//}
+        
+    }//GEN-LAST:event_DisplayAnsBActionPerformed
 
     /**
      * @param args the command line arguments
@@ -134,15 +177,11 @@ public class BioQs extends javax.swing.JFrame {
                     break;
                 }
             }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(BioQs.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(BioQs.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(BioQs.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
+        } catch (ClassNotFoundException | InstantiationException | IllegalAccessException | javax.swing.UnsupportedLookAndFeelException ex) {
             java.util.logging.Logger.getLogger(BioQs.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+    //</editor-fold>
+    
         //</editor-fold>
 
         /* Create and display the form */
@@ -154,16 +193,13 @@ public class BioQs extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JTextArea BAfield;
+    private javax.swing.JButton Bnextq;
+    private javax.swing.JButton Bsubmit;
+    private javax.swing.JButton DisplayAnsB;
     private javax.swing.JButton back;
-    private javax.swing.JLabel background;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JTextField jTextField2;
-    private javax.swing.ButtonGroup pictureButtons;
-    private javax.swing.JRadioButton picturebutton1;
-    private javax.swing.JRadioButton picturebutton2;
-    private javax.swing.JRadioButton picturebutton3;
+    private javax.swing.JTextArea bqField;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane2;
     // End of variables declaration//GEN-END:variables
 }

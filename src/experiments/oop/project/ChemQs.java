@@ -1,5 +1,8 @@
 package experiments.oop.project;
 
+import java.util.ArrayList;
+import javax.swing.JOptionPane;
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -10,12 +13,18 @@ package experiments.oop.project;
  * @author x14435708
  */
 public class ChemQs extends javax.swing.JFrame {
-
+private ArrayList <Question> Cqlist;
+private String Canswer;
+private int CACount;
     /**
      * Creates new form ChemQs
      */
     public ChemQs() {
         initComponents();
+         Cqlist = new ArrayList <>();
+        Canswer = new String();
+        CACount = 0;
+       
     }
 
     /**
@@ -28,15 +37,16 @@ public class ChemQs extends javax.swing.JFrame {
     private void initComponents() {
 
         Back = new javax.swing.JButton();
-        jTextField2 = new javax.swing.JTextField();
+        Csubmit = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTextArea1 = new javax.swing.JTextArea();
-        Submit = new javax.swing.JButton();
-        background = new javax.swing.JLabel();
+        cqField = new javax.swing.JTextArea();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        CAfield = new javax.swing.JTextArea();
+        Cnextq = new javax.swing.JButton();
+        DisplayAnsC = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMinimumSize(new java.awt.Dimension(455, 415));
-        getContentPane().setLayout(null);
 
         Back.setText("Back");
         Back.addActionListener(new java.awt.event.ActionListener() {
@@ -44,31 +54,82 @@ public class ChemQs extends javax.swing.JFrame {
                 BackActionPerformed(evt);
             }
         });
-        getContentPane().add(Back);
-        Back.setBounds(0, 0, 55, 23);
 
-        jTextField2.setEditable(false);
-        jTextField2.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jTextField2.setText("Fill in the missing formula");
-        getContentPane().add(jTextField2);
-        jTextField2.setBounds(84, 95, 274, 23);
+        Csubmit.setText("submit");
+        Csubmit.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CsubmitActionPerformed(evt);
+            }
+        });
 
-        jTextArea1.setColumns(20);
-        jTextArea1.setRows(5);
-        jTextArea1.setText("Please enter answer here!");
-        jScrollPane1.setViewportView(jTextArea1);
+        cqField.setEditable(false);
+        cqField.setColumns(20);
+        cqField.setFont(new java.awt.Font("Monospaced", 1, 14)); // NOI18N
+        cqField.setRows(5);
+        cqField.setText("Question 1: what color does \nlitmus paper make when dipped in \nacid?");
+        jScrollPane1.setViewportView(cqField);
 
-        getContentPane().add(jScrollPane1);
-        jScrollPane1.setBounds(84, 136, 274, 162);
+        CAfield.setColumns(20);
+        CAfield.setRows(5);
+        CAfield.setText("Please enter answer here!");
+        jScrollPane2.setViewportView(CAfield);
 
-        Submit.setText("submit");
-        getContentPane().add(Submit);
-        Submit.setBounds(190, 354, 63, 23);
+        Cnextq.setText("next");
+        Cnextq.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CnextqActionPerformed(evt);
+            }
+        });
 
-        background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/experiments/oop/project/6805727-plain-backgrounds.jpg"))); // NOI18N
-        background.setText("jLabel1");
-        getContentPane().add(background);
-        background.setBounds(0, 0, 455, 415);
+        DisplayAnsC.setText("Display Answers");
+        DisplayAnsC.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                DisplayAnsCActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
+        getContentPane().setLayout(layout);
+        layout.setHorizontalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(Back)
+                .addGap(0, 0, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(Cnextq)
+                .addGap(59, 59, 59))
+            .addGroup(layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(90, 90, 90)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 272, Short.MAX_VALUE)
+                            .addComponent(jScrollPane1)))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(191, 191, 191)
+                        .addComponent(Csubmit))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(171, 171, 171)
+                        .addComponent(DisplayAnsC)))
+                .addContainerGap(93, Short.MAX_VALUE))
+        );
+        layout.setVerticalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(Back)
+                .addGap(23, 23, 23)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(29, 29, 29)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(Csubmit)
+                .addGap(18, 18, 18)
+                .addComponent(DisplayAnsC)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(Cnextq)
+                .addGap(35, 35, 35))
+        );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -79,6 +140,48 @@ public class ChemQs extends javax.swing.JFrame {
         myChemPg.setVisible(true);
         dispose();
     }//GEN-LAST:event_BackActionPerformed
+int nextChem = 0;
+    private void CnextqActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CnextqActionPerformed
+        // TODO add your handling code here:
+                nextChem++;
+        int Ccount = 0;
+while(Ccount <= nextChem){
+    if(nextChem==1){
+        Cnextq.setVisible(false);
+    cqField.setText("Question 2: yes or no answer"
+            + "\nDo lemons count as acidic? ");
+    }
+Ccount++;
+}
+
+    }//GEN-LAST:event_CnextqActionPerformed
+
+    private void CsubmitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CsubmitActionPerformed
+        Canswer = CAfield.getText();
+        
+        Question q = new Question();
+        q.setAnswer(Canswer);
+        
+        //add object to arraylist
+        Cqlist.add(q);
+        
+        CACount++;
+    }//GEN-LAST:event_CsubmitActionPerformed
+
+    private void DisplayAnsCActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DisplayAnsCActionPerformed
+        // TODO add your handling code here:
+            int number = 0;
+        
+        String Correct[] = new String[2];
+        Correct[0]= " The correct answer is red";
+        Correct[1]= " The correct answer is stroma";
+       // for(int j=0;j<Correct.length;j++){
+        for(int i = 0; i < Cqlist.size();i++){
+            number++;
+            JOptionPane.showMessageDialog(null,"for question "+number+" your answer is: "+ Cqlist.get(i).getAnswer()+Correct[i]);
+        }//}
+        
+    }//GEN-LAST:event_DisplayAnsCActionPerformed
 
     /**
      * @param args the command line arguments
@@ -117,10 +220,12 @@ public class ChemQs extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton Back;
-    private javax.swing.JButton Submit;
-    private javax.swing.JLabel background;
+    private javax.swing.JTextArea CAfield;
+    private javax.swing.JButton Cnextq;
+    private javax.swing.JButton Csubmit;
+    private javax.swing.JButton DisplayAnsC;
+    private javax.swing.JTextArea cqField;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTextArea jTextArea1;
-    private javax.swing.JTextField jTextField2;
+    private javax.swing.JScrollPane jScrollPane2;
     // End of variables declaration//GEN-END:variables
 }

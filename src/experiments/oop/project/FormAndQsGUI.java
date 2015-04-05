@@ -31,11 +31,9 @@ public class FormAndQsGUI extends javax.swing.JFrame {
         ChemistryPg = new javax.swing.JButton();
         PhysicsPg = new javax.swing.JButton();
         home = new javax.swing.JButton();
-        background = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMinimumSize(new java.awt.Dimension(455, 415));
-        getContentPane().setLayout(null);
 
         BiologyPg.setText("Biology");
         BiologyPg.addActionListener(new java.awt.event.ActionListener() {
@@ -43,8 +41,6 @@ public class FormAndQsGUI extends javax.swing.JFrame {
                 BiologyPgActionPerformed(evt);
             }
         });
-        getContentPane().add(BiologyPg);
-        BiologyPg.setBounds(172, 64, 103, 50);
 
         ChemistryPg.setText("Chemistry");
         ChemistryPg.addActionListener(new java.awt.event.ActionListener() {
@@ -52,8 +48,6 @@ public class FormAndQsGUI extends javax.swing.JFrame {
                 ChemistryPgActionPerformed(evt);
             }
         });
-        getContentPane().add(ChemistryPg);
-        ChemistryPg.setBounds(172, 180, 103, 50);
 
         PhysicsPg.setText("Physics");
         PhysicsPg.addActionListener(new java.awt.event.ActionListener() {
@@ -61,8 +55,6 @@ public class FormAndQsGUI extends javax.swing.JFrame {
                 PhysicsPgActionPerformed(evt);
             }
         });
-        getContentPane().add(PhysicsPg);
-        PhysicsPg.setBounds(172, 289, 103, 50);
 
         home.setText("Home");
         home.addActionListener(new java.awt.event.ActionListener() {
@@ -70,13 +62,34 @@ public class FormAndQsGUI extends javax.swing.JFrame {
                 homeActionPerformed(evt);
             }
         });
-        getContentPane().add(home);
-        home.setBounds(0, 0, 70, 23);
 
-        background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/experiments/oop/project/6805727-plain-backgrounds.jpg"))); // NOI18N
-        background.setText("jLabel1");
-        getContentPane().add(background);
-        background.setBounds(0, 0, 455, 415);
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
+        getContentPane().setLayout(layout);
+        layout.setHorizontalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(home)
+                .addGap(0, 0, Short.MAX_VALUE))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(172, 172, 172)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(BiologyPg, javax.swing.GroupLayout.DEFAULT_SIZE, 103, Short.MAX_VALUE)
+                    .addComponent(ChemistryPg, javax.swing.GroupLayout.DEFAULT_SIZE, 103, Short.MAX_VALUE)
+                    .addComponent(PhysicsPg, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(180, Short.MAX_VALUE))
+        );
+        layout.setVerticalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(home)
+                .addGap(41, 41, 41)
+                .addComponent(BiologyPg, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(66, 66, 66)
+                .addComponent(ChemistryPg, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(59, 59, 59)
+                .addComponent(PhysicsPg, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(76, Short.MAX_VALUE))
+        );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -103,9 +116,11 @@ public class FormAndQsGUI extends javax.swing.JFrame {
     }//GEN-LAST:event_PhysicsPgActionPerformed
 
     private void homeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_homeActionPerformed
+        // TODO add your handling code here:
         MainMenu myMainMenu = new MainMenu();
         myMainMenu.setVisible(true);
-        dispose();// TODO add your handling code here:
+        dispose();
+
     }//GEN-LAST:event_homeActionPerformed
 
     /**
@@ -147,7 +162,6 @@ public class FormAndQsGUI extends javax.swing.JFrame {
     private javax.swing.JButton BiologyPg;
     private javax.swing.JButton ChemistryPg;
     private javax.swing.JButton PhysicsPg;
-    private javax.swing.JLabel background;
     private javax.swing.JButton home;
     // End of variables declaration//GEN-END:variables
 }

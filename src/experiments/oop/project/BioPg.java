@@ -1,5 +1,11 @@
 package experiments.oop.project;
 
+import experiments.oop.project.FormAndQsGUI;
+
+
+
+
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -11,12 +17,18 @@ package experiments.oop.project;
  */
 public class BioPg extends javax.swing.JFrame {
 
+
     /**
      * Creates new form BioPg
      */
     public BioPg() {
+
         initComponents();
     }
+
+    /**
+     *
+     */
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -27,51 +39,76 @@ public class BioPg extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jTextField1 = new javax.swing.JTextField();
+        cbtn = new javax.swing.JButton();
+        qButton = new javax.swing.JButton();
+        LTopic = new javax.swing.JLabel();
+        LTitle = new javax.swing.JLabel();
+        pic = new javax.swing.JLabel();
         Return = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTextArea1 = new javax.swing.JTextArea();
-        Proceed = new javax.swing.JButton();
-        background = new javax.swing.JLabel();
+        LField = new javax.swing.JTextArea();
+
+        jTextField1.setText("jTextField1");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setMinimumSize(new java.awt.Dimension(455, 425));
+        setMinimumSize(new java.awt.Dimension(455, 415));
         getContentPane().setLayout(null);
 
-        Return.setText("Back");
+        cbtn.setText("continue lesson");
+        cbtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cbtnActionPerformed(evt);
+            }
+        });
+        getContentPane().add(cbtn);
+        cbtn.setBounds(170, 340, 150, 23);
+
+        qButton.setText("click to do questions");
+        qButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                qButtonActionPerformed(evt);
+            }
+        });
+        getContentPane().add(qButton);
+        qButton.setBounds(170, 360, 150, 23);
+
+        LTopic.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        LTopic.setText("Topic: Photosynthesis");
+        getContentPane().add(LTopic);
+        LTopic.setBounds(180, 130, 160, 14);
+
+        LTitle.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        LTitle.setText("Biology");
+        getContentPane().add(LTitle);
+        LTitle.setBounds(210, 70, 100, 22);
+
+        pic.setIcon(new javax.swing.ImageIcon(getClass().getResource("/experiments/oop/project/Photosynthesis.gif"))); // NOI18N
+        getContentPane().add(pic);
+        pic.setBounds(60, 30, 350, 300);
+
+        Return.setText("Return");
         Return.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 ReturnActionPerformed(evt);
             }
         });
         getContentPane().add(Return);
-        Return.setBounds(0, 0, 55, 23);
+        Return.setBounds(0, 0, 67, 23);
 
-        jTextArea1.setEditable(false);
-        jTextArea1.setColumns(20);
-        jTextArea1.setRows(5);
-        jTextArea1.setText("Biology theory\n\nTopic: photosynthesis\n\nLorem ipsum dolor sit amet, consectetur ad\npiscing elit. Phasellus massa mauris, soda\nles at fermentum vitae, porta a arcu. Done\nc a odio consequat, hendrerit nulla et, im\nperdiet risus. Sed nisi tellus, porttitor \nut metus et, interdum scelerisque sapien. \nMaecenas vestibulum commodo facilisis. Ut \nut ipsum elit. Nunc sapien ante, pellentes\nque ut metus a, consequat vestibulum arcu.");
-        jScrollPane1.setViewportView(jTextArea1);
+        LField.setEditable(false);
+        LField.setColumns(20);
+        LField.setRows(5);
+        jScrollPane1.setViewportView(LField);
 
         getContentPane().add(jScrollPane1);
-        jScrollPane1.setBounds(55, 55, 347, 258);
-
-        Proceed.setText("click to do question");
-        Proceed.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                ProceedActionPerformed(evt);
-            }
-        });
-        getContentPane().add(Proceed);
-        Proceed.setBounds(151, 355, 150, 23);
-
-        background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/experiments/oop/project/6805727-plain-backgrounds.jpg"))); // NOI18N
-        background.setText("jLabel1");
-        getContentPane().add(background);
-        background.setBounds(0, 0, 455, 415);
+        jScrollPane1.setBounds(60, 50, 350, 258);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+  
 
+    
     private void ReturnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ReturnActionPerformed
         // TODO add your handling code here:
       FormAndQsGUI myMain = new FormAndQsGUI();
@@ -79,18 +116,71 @@ public class BioPg extends javax.swing.JFrame {
       dispose();
     }//GEN-LAST:event_ReturnActionPerformed
 
-    private void ProceedActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ProceedActionPerformed
+    private void qButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_qButtonActionPerformed
         // TODO add your handling code here:
         BioQs myBioQs = new BioQs();
         myBioQs.setVisible(true);
         dispose();
-                
-    }//GEN-LAST:event_ProceedActionPerformed
+
+    }//GEN-LAST:event_qButtonActionPerformed
+int Bclicked = 0;
+    private void cbtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbtnActionPerformed
+        // TODO add your handling code here:     
+Bclicked++;
+int Bcount = 0;
+while(Bcount <= Bclicked){
+      
+       if(Bclicked==1){
+       pic.setVisible(false);
+       LTitle.setVisible(false);
+       LTopic.setVisible(false);
+LField.setText("Biology theory\n" +
+"\n" +
+"Topic: photosynthesis \n" + "\n"
++ "Photosynthesis is the process of converting light energy to "
+        + "\n chemical energy and storing it in the bonds of sugar."
+        + "\n"
+        + "\n Light is actually energy, electromagnetic energy to be "
+        + "\n exact. When that energy gets to a green plant, all sorts "
+        + "\n of reactions can take place to store energy in the "
+        + "\n form of sugar molecules. ");
+        }
+        else if(Bclicked == 2){
+        LField.setText("Biology theory\n" +
+"\n" +
+"Topic: photosynthesis part 2 \n" + "\n"
+                + "The cells in plants that give the green color is chloroplasts "
+                + "\n photosynthesis happens in the chloroplast. Within "
+                + "\n this cell organelle is the chlorophyll that captures "
+                + "\n the light from the Sun."
+                + "\n"
+                + "\nThe molecules are moved and converted in the area "
+                + "\ncalled the stroma. ");
+        }
+        else{
+            cbtn.setVisible(false);
+        LField.setText("Biology theory\n" +"\n" +
+    "Topic: photosynthesis part 3 \n" + "\n"
+                    + "\n The whole process doesn't happen all at one time. The"
+                    + "\n process of photosynthesis is divided into two main parts."
+                    + "\n The first part is called the light dependent reaction."
+                    + "\n This reaction happens when the light energy is captured "
+                    + "\n and pushed into a chemical called ATP. The second part of "
+                    + "\n the process happens when the ATP is used to make "
+                    + "\n glucose (the Calvin Cycle). That second part is called "
+                    + "\n the light independentreaction. "
+        );
+        }
+  Bcount++;
+}
+
+
+    }//GEN-LAST:event_cbtnActionPerformed
 
     /**
      * @param args the command line arguments
      */
-    public static void main(String args[]) {
+   public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
         /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
@@ -103,19 +193,16 @@ public class BioPg extends javax.swing.JFrame {
                     break;
                 }
             }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(BioPg.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(BioPg.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(BioPg.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
+        } catch (ClassNotFoundException | InstantiationException | IllegalAccessException | javax.swing.UnsupportedLookAndFeelException ex) {
             java.util.logging.Logger.getLogger(BioPg.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
+            @Override
             public void run() {
                 new BioPg().setVisible(true);
             }
@@ -123,10 +210,14 @@ public class BioPg extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton Proceed;
+    private javax.swing.JTextArea LField;
+    private javax.swing.JLabel LTitle;
+    private javax.swing.JLabel LTopic;
     private javax.swing.JButton Return;
-    private javax.swing.JLabel background;
+    private javax.swing.JButton cbtn;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTextArea jTextArea1;
+    private javax.swing.JTextField jTextField1;
+    private javax.swing.JLabel pic;
+    private javax.swing.JButton qButton;
     // End of variables declaration//GEN-END:variables
 }

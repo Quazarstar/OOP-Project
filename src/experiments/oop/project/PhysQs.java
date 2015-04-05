@@ -1,5 +1,8 @@
 package experiments.oop.project;
 
+import java.util.ArrayList;
+import javax.swing.JOptionPane;
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -10,12 +13,18 @@ package experiments.oop.project;
  * @author x14435708
  */
 public class PhysQs extends javax.swing.JFrame {
-
+private ArrayList <Question> Pqlist;
+private String Panswer;
+private int PACount;
+    /**
     /**
      * Creates new form PhysQs
      */
     public PhysQs() {
         initComponents();
+        Pqlist = new ArrayList <>();
+        Panswer = new String();
+        PACount = 0;
     }
 
     /**
@@ -28,14 +37,16 @@ public class PhysQs extends javax.swing.JFrame {
     private void initComponents() {
 
         Back = new javax.swing.JButton();
-        jTextField1 = new javax.swing.JTextField();
-        jTextField2 = new javax.swing.JTextField();
-        Submit = new javax.swing.JButton();
-        background = new javax.swing.JLabel();
+        Psubmit = new javax.swing.JButton();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        pqField = new javax.swing.JTextArea();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        PAfield = new javax.swing.JTextArea();
+        Pnextq = new javax.swing.JButton();
+        DisplayAnsP = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMinimumSize(new java.awt.Dimension(455, 415));
-        getContentPane().setLayout(null);
 
         Back.setText("Back");
         Back.addActionListener(new java.awt.event.ActionListener() {
@@ -43,32 +54,82 @@ public class PhysQs extends javax.swing.JFrame {
                 BackActionPerformed(evt);
             }
         });
-        getContentPane().add(Back);
-        Back.setBounds(0, 0, 55, 23);
 
-        jTextField1.setEditable(false);
-        jTextField1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        jTextField1.setText("Question: Solve the formula");
-        jTextField1.addActionListener(new java.awt.event.ActionListener() {
+        Psubmit.setText("submit");
+        Psubmit.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField1ActionPerformed(evt);
+                PsubmitActionPerformed(evt);
             }
         });
-        getContentPane().add(jTextField1);
-        jTextField1.setBounds(95, 40, 260, 28);
 
-        jTextField2.setText("Formula will be outlined here.");
-        getContentPane().add(jTextField2);
-        jTextField2.setBounds(95, 100, 245, 155);
+        pqField.setEditable(false);
+        pqField.setColumns(20);
+        pqField.setFont(new java.awt.Font("Monospaced", 1, 14)); // NOI18N
+        pqField.setRows(5);
+        pqField.setText("__________ is the change in \ndirection of a beam of light when \nit enters from one medium to \nanother.");
+        jScrollPane1.setViewportView(pqField);
 
-        Submit.setText("submit");
-        getContentPane().add(Submit);
-        Submit.setBounds(186, 295, 63, 23);
+        PAfield.setColumns(20);
+        PAfield.setRows(5);
+        PAfield.setText("Please enter answer here!");
+        jScrollPane2.setViewportView(PAfield);
 
-        background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/experiments/oop/project/6805727-plain-backgrounds.jpg"))); // NOI18N
-        background.setText("jLabel1");
-        getContentPane().add(background);
-        background.setBounds(0, 0, 455, 415);
+        Pnextq.setText("next");
+        Pnextq.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                PnextqActionPerformed(evt);
+            }
+        });
+
+        DisplayAnsP.setText("Display Answers");
+        DisplayAnsP.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                DisplayAnsPActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
+        getContentPane().setLayout(layout);
+        layout.setHorizontalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(Psubmit)
+                        .addGap(193, 193, 193))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(Pnextq)
+                        .addGap(36, 36, 36))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(DisplayAnsP)
+                        .addGap(168, 168, 168))))
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(Back)
+                .addGap(43, 43, 43)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 271, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 299, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(56, Short.MAX_VALUE))
+        );
+        layout.setVerticalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(Back)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(22, 22, 22)
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(42, 42, 42)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(28, 28, 28)
+                .addComponent(Psubmit)
+                .addGap(18, 18, 18)
+                .addComponent(DisplayAnsP)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 22, Short.MAX_VALUE)
+                .addComponent(Pnextq)
+                .addGap(33, 33, 33))
+        );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -79,10 +140,49 @@ public class PhysQs extends javax.swing.JFrame {
         myPhysPg.setVisible(true);
         dispose();
     }//GEN-LAST:event_BackActionPerformed
-
-    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
+int nextPhys =0;
+    private void PnextqActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PnextqActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField1ActionPerformed
+                        nextPhys++;
+        int Pcount = 0;
+while(Pcount <= nextPhys){
+    if(nextPhys==1){
+    Pnextq.setVisible(false);
+    pqField.setText("Question 2: what is used to show that"
+            + "\nwhite light is a spectrum of colors? ");
+    }
+Pcount++;
+}
+
+    }//GEN-LAST:event_PnextqActionPerformed
+
+    private void PsubmitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PsubmitActionPerformed
+        // TODO add your handling code here:
+          Panswer = PAfield.getText();
+        
+        Question q = new Question();
+        q.setAnswer(Panswer);
+        
+        //add object to arraylist
+        Pqlist.add(q);
+        
+        PACount++;
+    }//GEN-LAST:event_PsubmitActionPerformed
+
+    private void DisplayAnsPActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DisplayAnsPActionPerformed
+        // TODO add your handling code here:
+            int number = 0;
+        
+        String Correct[] = new String[2];
+        Correct[0]= " The correct answer is refraction";
+        Correct[1]= " The correct answer is a prism";
+       // for(int j=0;j<Correct.length;j++){
+        for(int i = 0; i < Pqlist.size();i++){
+            number++;
+            JOptionPane.showMessageDialog(null,"for question "+number+" your answer is: "+ Pqlist.get(i).getAnswer()+Correct[i]);
+        }//}
+        
+    }//GEN-LAST:event_DisplayAnsPActionPerformed
 
     /**
      * @param args the command line arguments
@@ -121,9 +221,12 @@ public class PhysQs extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton Back;
-    private javax.swing.JButton Submit;
-    private javax.swing.JLabel background;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
+    private javax.swing.JButton DisplayAnsP;
+    private javax.swing.JTextArea PAfield;
+    private javax.swing.JButton Pnextq;
+    private javax.swing.JButton Psubmit;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JTextArea pqField;
     // End of variables declaration//GEN-END:variables
 }

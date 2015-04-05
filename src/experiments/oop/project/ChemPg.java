@@ -28,32 +28,27 @@ public class ChemPg extends javax.swing.JFrame {
     private void initComponents() {
 
         Return = new javax.swing.JButton();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        jTextArea1 = new javax.swing.JTextArea();
         Proceed = new javax.swing.JButton();
-        background = new javax.swing.JLabel();
+        CTitle = new javax.swing.JLabel();
+        CTopic = new javax.swing.JLabel();
+        CPic = new javax.swing.JLabel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        CHField = new javax.swing.JTextArea();
+        CCont = new javax.swing.JButton();
+        CQuestions = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMinimumSize(new java.awt.Dimension(455, 415));
         getContentPane().setLayout(null);
 
-        Return.setText("Back");
+        Return.setText("Return");
         Return.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 ReturnActionPerformed(evt);
             }
         });
         getContentPane().add(Return);
-        Return.setBounds(0, 0, 55, 23);
-
-        jTextArea1.setEditable(false);
-        jTextArea1.setColumns(20);
-        jTextArea1.setRows(5);
-        jTextArea1.setText("Chemistry \ntopic:molecules\nLorem ipsum dolor sit amet, consectetur\n adipiscing elit. Phasellus massa mauri\ns, sodales at fermentum vitae, porta a \narcu. Donec a odio consequat, hendrerit\n nulla et, imperdiet risus. Sed nisi te\nllus, porttitor ut metus et, interdum s\ncelerisque sapien. Maecenas vestibulum \ncommodo facilisis. Ut ut ipsum elit. Nu\nnc sapien ante, pellentesque ut metus a\n, consequat vestibulum arcu. Sed ut lac\nus laoreet, porttitor diam maximus");
-        jScrollPane1.setViewportView(jTextArea1);
-
-        getContentPane().add(jScrollPane1);
-        jScrollPane1.setBounds(76, 54, 321, 261);
+        Return.setBounds(0, 0, 67, 23);
 
         Proceed.setText("click to do question");
         Proceed.addActionListener(new java.awt.event.ActionListener() {
@@ -62,12 +57,46 @@ public class ChemPg extends javax.swing.JFrame {
             }
         });
         getContentPane().add(Proceed);
-        Proceed.setBounds(149, 352, 150, 23);
+        Proceed.setBounds(149, 746, 150, 23);
 
-        background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/experiments/oop/project/6805727-plain-backgrounds.jpg"))); // NOI18N
-        background.setText("jLabel1");
-        getContentPane().add(background);
-        background.setBounds(0, 0, 455, 415);
+        CTitle.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        CTitle.setText("Chemistry ");
+        getContentPane().add(CTitle);
+        CTitle.setBounds(190, 130, 130, 22);
+
+        CTopic.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        CTopic.setText("acids and bases");
+        getContentPane().add(CTopic);
+        CTopic.setBounds(180, 190, 140, 17);
+
+        CPic.setIcon(new javax.swing.ImageIcon(getClass().getResource("/experiments/oop/project/litmuspaper.jpg"))); // NOI18N
+        getContentPane().add(CPic);
+        CPic.setBounds(40, 30, 390, 270);
+
+        CHField.setColumns(20);
+        CHField.setRows(5);
+        jScrollPane1.setViewportView(CHField);
+
+        getContentPane().add(jScrollPane1);
+        jScrollPane1.setBounds(80, 90, 290, 200);
+
+        CCont.setText("continue lesson");
+        CCont.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CContActionPerformed(evt);
+            }
+        });
+        getContentPane().add(CCont);
+        CCont.setBounds(170, 300, 150, 23);
+
+        CQuestions.setText("click to do questions");
+        CQuestions.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CQuestionsActionPerformed(evt);
+            }
+        });
+        getContentPane().add(CQuestions);
+        CQuestions.setBounds(170, 320, 150, 23);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -86,6 +115,65 @@ public class ChemPg extends javax.swing.JFrame {
         dispose();
                 
     }//GEN-LAST:event_ProceedActionPerformed
+
+    private void CQuestionsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CQuestionsActionPerformed
+        // TODO add your handling code here:
+        ChemQs myChemQs = new ChemQs();
+        myChemQs.setVisible(true);
+        dispose();
+    }//GEN-LAST:event_CQuestionsActionPerformed
+int CClicked = 0;
+    private void CContActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CContActionPerformed
+        // TODO add your handling code here:
+        CClicked++;
+       int CCount = 0;
+       while(CCount <= CClicked){
+       if(CClicked==1){
+           CTitle.setVisible(false);
+           CTopic.setVisible(false);
+           CPic.setVisible(false);
+           CHField.setText("Chemistry\n"
+               + "\n"
+               + "\nTopic: Acids and bases"
+               + "\n"
+               + "\nacids produce H+ ions in aqueous solutions"
+               + "\nbases produce OH- ions in aqueous solutions"
+               + "\nProperties of acids are: "
+                   + "\nTastes sour"
+                   + "\nacids change litmus from blue to red"
+                   );
+       }
+       else if(CClicked==2){
+       CHField.setText("Chemistry\n"
+               + "\n"
+               + "\nTopic: Acids and bases part 2"
+               + "\n"
+               + "\nProterties of acids(cont):"
+               + "\nreact with bases to form salts and water"
+               + "\nacids are proton donors"
+               + "\nAn example of acids would be from cirix "
+               + "\nfruits soft drinks");
+       }
+       else if(CClicked==3){
+           CCont.setVisible(false);
+       CHField.setText("Chemistry\n"
+               + "\n"
+               + "\nTopic: Acids and bases part 3"
+               + "\n"
+               + "\nProperties of Bases are:"
+               + "\nthey taste bitter"
+               + "\nfeel slippery or soapy"
+               + "\nbases don't change the color of litmus; "
+               + "\nthey can turn red (acidified) litmus back to blue"
+               + "\n");
+       }
+       else{
+       
+       }
+       CCount++;
+       }
+      
+    }//GEN-LAST:event_CContActionPerformed
 
     /**
      * @param args the command line arguments
@@ -123,10 +211,14 @@ public class ChemPg extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton CCont;
+    private javax.swing.JTextArea CHField;
+    private javax.swing.JLabel CPic;
+    private javax.swing.JButton CQuestions;
+    private javax.swing.JLabel CTitle;
+    private javax.swing.JLabel CTopic;
     private javax.swing.JButton Proceed;
     private javax.swing.JButton Return;
-    private javax.swing.JLabel background;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTextArea jTextArea1;
     // End of variables declaration//GEN-END:variables
 }

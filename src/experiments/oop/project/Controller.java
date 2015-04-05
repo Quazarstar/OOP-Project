@@ -98,7 +98,7 @@ public class Controller {
         
         FileReader re3 = new FileReader("selection3.txt");
         BufferedReader red3 = new BufferedReader(re3);
-        subject = red3.readLine();
+        area = red3.readLine();
         red3.close();
         
         

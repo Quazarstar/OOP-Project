@@ -28,10 +28,13 @@ public class PhysPg extends javax.swing.JFrame {
     private void initComponents() {
 
         Return = new javax.swing.JButton();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        jTextArea1 = new javax.swing.JTextArea();
         Proceed = new javax.swing.JButton();
-        background = new javax.swing.JLabel();
+        ContL = new javax.swing.JButton();
+        PhsLTitle = new javax.swing.JLabel();
+        PhsLTopic = new javax.swing.JLabel();
+        PPic = new javax.swing.JLabel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        PLBox = new javax.swing.JTextArea();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMinimumSize(new java.awt.Dimension(455, 415));
@@ -46,15 +49,6 @@ public class PhysPg extends javax.swing.JFrame {
         getContentPane().add(Return);
         Return.setBounds(0, 0, 65, 23);
 
-        jTextArea1.setEditable(false);
-        jTextArea1.setColumns(20);
-        jTextArea1.setRows(5);
-        jTextArea1.setText("Physics formulas will go here.");
-        jScrollPane1.setViewportView(jTextArea1);
-
-        getContentPane().add(jScrollPane1);
-        jScrollPane1.setBounds(80, 55, 270, 241);
-
         Proceed.setText("click to do questions");
         Proceed.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -62,12 +56,40 @@ public class PhysPg extends javax.swing.JFrame {
             }
         });
         getContentPane().add(Proceed);
-        Proceed.setBounds(146, 351, 150, 23);
+        Proceed.setBounds(150, 330, 150, 23);
 
-        background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/experiments/oop/project/6805727-plain-backgrounds.jpg"))); // NOI18N
-        background.setText("jLabel1");
-        getContentPane().add(background);
-        background.setBounds(0, 0, 455, 415);
+        ContL.setText("continue lesson");
+        ContL.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ContLActionPerformed(evt);
+            }
+        });
+        getContentPane().add(ContL);
+        ContL.setBounds(150, 310, 150, 23);
+
+        PhsLTitle.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        PhsLTitle.setForeground(new java.awt.Color(255, 255, 255));
+        PhsLTitle.setText("Physics");
+        getContentPane().add(PhsLTitle);
+        PhsLTitle.setBounds(190, 60, 90, 22);
+
+        PhsLTopic.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        PhsLTopic.setForeground(new java.awt.Color(255, 255, 255));
+        PhsLTopic.setText("Topic: Refraction");
+        getContentPane().add(PhsLTopic);
+        PhsLTopic.setBounds(170, 150, 130, 17);
+
+        PPic.setIcon(new javax.swing.ImageIcon(getClass().getResource("/experiments/oop/project/refraction.jpg"))); // NOI18N
+        getContentPane().add(PPic);
+        PPic.setBounds(40, 30, 380, 280);
+
+        PLBox.setEditable(false);
+        PLBox.setColumns(20);
+        PLBox.setRows(5);
+        jScrollPane1.setViewportView(PLBox);
+
+        getContentPane().add(jScrollPane1);
+        jScrollPane1.setBounds(80, 55, 290, 200);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -85,6 +107,62 @@ public class PhysPg extends javax.swing.JFrame {
         myPhysQs.setVisible(true);
         dispose();
     }//GEN-LAST:event_ProceedActionPerformed
+int Pclicked = 0;
+    private void ContLActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ContLActionPerformed
+        // TODO add your handling code here:
+          Pclicked++;   
+       int Pcount = 0;
+       while(Pcount <= Pclicked){
+       
+           if(Pclicked==1){
+       PPic.setVisible(false);
+       PhsLTitle.setVisible(false);
+       PhsLTopic.setVisible(false);
+        PLBox.setText("Physics "
+                + "\n "
+                + "\nTopic:Refraction"
+                + "\n "
+                + "\nRefracion is the change of direction of a"
+                + "\nbeam of light when it enters from one medium"
+                + "\nfrom another."
+                + "\n"
+                + "\nWhen light hits a thicker(slower) medium"
+                + "\nthe bottom part of the ray slows down"
+                + "\nand the ray bends");
+       }
+           else if(Pclicked==2){
+           PLBox.setText("Physics "
+                + "\n "
+                + "\nTopic:Refraction part 2"
+                + "\n"
+                   + "\nIn our lives a common example of refraction is"
+                   + "\nwhen we look at the distorted image in the"
+                   + "\nwater. If you dip a pencil in water you will"
+                   + "\nsee it bend. That is because the light "
+                   + "\nreflecting off the pencil is bending when it "
+                   + "\nleaves the water");
+       }
+           else if(Pclicked==3){
+               ContL.setVisible(false);
+           PLBox.setText("Physics "
+                + "\n "
+                + "\nTopic:Refraction part 3"
+                + "\n"
+                   + "\nIn the first image you've seen the glass prism"
+                   + "\nand what it shows is the fact White light is "
+                   + "\nmade up of a full spectrum of colors. Each "
+                   + "\ncolor has a different wavelength, and bends "
+                   + "\nat a different angle. This is the same effect"
+                   + "\n that produces rainbows in the atmosphere");
+           }  
+           Pcount++;
+       }
+      
+  
+        
+        
+        
+    }//GEN-LAST:event_ContLActionPerformed
 
     /**
      * @param args the command line arguments
@@ -102,15 +180,11 @@ public class PhysPg extends javax.swing.JFrame {
                     break;
                 }
             }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(PhysPg.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(PhysPg.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(PhysPg.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
+        } catch (ClassNotFoundException | InstantiationException | IllegalAccessException | javax.swing.UnsupportedLookAndFeelException ex) {
             java.util.logging.Logger.getLogger(PhysPg.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        
         //</editor-fold>
 
         /* Create and display the form */
@@ -122,10 +196,13 @@ public class PhysPg extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton ContL;
+    private javax.swing.JTextArea PLBox;
+    private javax.swing.JLabel PPic;
+    private javax.swing.JLabel PhsLTitle;
+    private javax.swing.JLabel PhsLTopic;
     private javax.swing.JButton Proceed;
     private javax.swing.JButton Return;
-    private javax.swing.JLabel background;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTextArea jTextArea1;
     // End of variables declaration//GEN-END:variables
 }
