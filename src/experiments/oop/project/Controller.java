@@ -21,6 +21,7 @@ import javax.swing.JOptionPane;
 public class Controller {
     private String cycle;
     private String subject;
+    private String area;
     
     public void setCycle(String cycle){
         this.cycle = cycle;
@@ -30,26 +31,72 @@ public class Controller {
         this.subject = subject;
         }
     
-    public void writeOpt(){
+    public void setArea(String area){
+    this.area = area;
+    }
+    
+    public void writeCycle(){
         try{
                 FileWriter fw = new FileWriter("selection.txt");
                 BufferedWriter bw = new BufferedWriter(fw);
                 bw.write(cycle);
                 bw.close();
-                JOptionPane.showMessageDialog(null, cycle);
                 
+        }
+        catch(IOException e){JOptionPane.showMessageDialog(null, "We have an issue in writing");}
+    }
+    
+    
+    public void writeSubject(){
+        try{
                 FileWriter fw2 = new FileWriter("selection2.txt");
                 BufferedWriter bw2 = new BufferedWriter(fw2);
                 bw2.write(subject);
                 bw2.close();
                 
+                
         }
-        catch(IOException e){JOptionPane.showMessageDialog(null, "We have an issue");}
+        catch(IOException e){JOptionPane.showMessageDialog(null, "We have an issue in writing");}
     }
+    
+    public void writeArea(){
+        try{
+                FileWriter fw3 = new FileWriter("selection3.txt");
+                BufferedWriter bw3 = new BufferedWriter(fw3);
+                bw3.write(area);
+                bw3.close();
+                
+        }
+        catch(IOException e){JOptionPane.showMessageDialog(null, "We have an issue in writing");}
+    }
+    
     
     public void readIn(){
-            
-    
-    
+        try {
+        FileReader re = new FileReader("selection.txt");
+        BufferedReader red = new BufferedReader(re);
+        cycle = red.readLine();
+        red.close();
+        
+        FileReader re2 = new FileReader("selection2.txt");
+        BufferedReader red2 = new BufferedReader(re2);
+        subject = red2.readLine();
+        red2.close();
+        
+        FileReader re3 = new FileReader("selection3.txt");
+        BufferedReader red3 = new BufferedReader(re3);
+        subject = red3.readLine();
+        red3.close();
+        
+        
+        }
+        catch(IOException e){JOptionPane.showMessageDialog(null, "We have an issue in reading");}
     }
+    
+    public void checker(){
+        JOptionPane.showMessageDialog(null, area + "Cycle => " + cycle + ". Subject => " + subject + ". Area => " + area + ".");
+    
+    } 
 }
+
+
