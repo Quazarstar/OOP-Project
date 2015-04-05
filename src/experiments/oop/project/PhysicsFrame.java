@@ -34,6 +34,14 @@ public class PhysicsFrame extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
+        jLabel9 = new javax.swing.JLabel();
+        jLabel10 = new javax.swing.JLabel();
+        jLabel11 = new javax.swing.JLabel();
+        jLabel12 = new javax.swing.JLabel();
+        jLabel13 = new javax.swing.JLabel();
         background = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -47,7 +55,7 @@ public class PhysicsFrame extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton1);
-        jButton1.setBounds(60, 340, 121, 23);
+        jButton1.setBounds(80, 350, 130, 23);
 
         jButton2.setText("Next page");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
@@ -56,7 +64,7 @@ public class PhysicsFrame extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton2);
-        jButton2.setBounds(220, 340, 121, 23);
+        jButton2.setBounds(230, 350, 130, 23);
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel1.setText("Physics");
@@ -64,24 +72,64 @@ public class PhysicsFrame extends javax.swing.JFrame {
         jLabel1.setBounds(179, 0, 50, 17);
 
         jLabel2.setFont(new java.awt.Font("Tahoma", 0, 13)); // NOI18N
-        jLabel2.setText("1. This is used quite a lot ");
+        jLabel2.setText("1. Bunsen burner: used to creat a hot which is used in experiments.");
         getContentPane().add(jLabel2);
-        jLabel2.setBounds(59, 61, 148, 16);
+        jLabel2.setBounds(0, 20, 410, 20);
 
         jLabel3.setFont(new java.awt.Font("Tahoma", 0, 13)); // NOI18N
-        jLabel3.setText("2. Be careful whilte handling this");
+        jLabel3.setText("2. Ball: metal ball which is used in experiments and Newton's cradle. ");
         getContentPane().add(jLabel3);
-        jLabel3.setBounds(59, 117, 210, 16);
+        jLabel3.setBounds(0, 40, 400, 16);
 
         jLabel4.setFont(new java.awt.Font("Tahoma", 0, 13)); // NOI18N
-        jLabel4.setText("3. Don't over heat this piece...");
+        jLabel4.setText("3. Balance: used to see which object may be heavier.");
         getContentPane().add(jLabel4);
-        jLabel4.setBounds(59, 173, 172, 16);
+        jLabel4.setBounds(0, 70, 306, 16);
 
         jLabel5.setFont(new java.awt.Font("Tahoma", 0, 13)); // NOI18N
-        jLabel5.setText("4. Wash after used");
+        jLabel5.setText("4. Battery: used in electricity experiements. ");
         getContentPane().add(jLabel5);
-        jLabel5.setBounds(59, 229, 109, 16);
+        jLabel5.setBounds(0, 100, 270, 16);
+
+        jLabel6.setFont(new java.awt.Font("Tahoma", 0, 13)); // NOI18N
+        jLabel6.setText("5. Convex Lens: Used in optics experiments.");
+        getContentPane().add(jLabel6);
+        jLabel6.setBounds(0, 130, 270, 16);
+
+        jLabel7.setFont(new java.awt.Font("Tahoma", 0, 13)); // NOI18N
+        jLabel7.setText("6. Concave Lens: also used in optics experiments.");
+        getContentPane().add(jLabel7);
+        jLabel7.setBounds(0, 160, 290, 16);
+
+        jLabel8.setFont(new java.awt.Font("Tahoma", 0, 13)); // NOI18N
+        jLabel8.setText("7. Light source: something like a flash light or bulb used to create a beam ");
+        getContentPane().add(jLabel8);
+        jLabel8.setBounds(0, 190, 430, 16);
+
+        jLabel9.setFont(new java.awt.Font("Tahoma", 0, 13)); // NOI18N
+        jLabel9.setText("of light.");
+        getContentPane().add(jLabel9);
+        jLabel9.setBounds(20, 210, 43, 16);
+
+        jLabel10.setFont(new java.awt.Font("Tahoma", 0, 13)); // NOI18N
+        jLabel10.setText("8. Flask: used to carry liquids. ");
+        getContentPane().add(jLabel10);
+        jLabel10.setBounds(0, 240, 200, 16);
+
+        jLabel11.setFont(new java.awt.Font("Tahoma", 0, 13)); // NOI18N
+        jLabel11.setText("9. Light Gate: used to measure speed in mechanics experiments.");
+        getContentPane().add(jLabel11);
+        jLabel11.setBounds(0, 270, 320, 16);
+
+        jLabel12.setFont(new java.awt.Font("Tahoma", 0, 13)); // NOI18N
+        jLabel12.setText("10. Metre stick: mainly used for experiments in mechanics, to hold springs");
+        getContentPane().add(jLabel12);
+        jLabel12.setBounds(0, 290, 430, 16);
+
+        jLabel13.setFont(new java.awt.Font("Tahoma", 0, 13)); // NOI18N
+        jLabel13.setText("with weights attached. ");
+        getContentPane().add(jLabel13);
+        jLabel13.setBounds(20, 310, 170, 14);
 
         background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/experiments/oop/project/6805727-plain-backgrounds.jpg"))); // NOI18N
         background.setText("jLabel1");
@@ -144,9 +192,17 @@ public class PhysicsFrame extends javax.swing.JFrame {
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
     // End of variables declaration//GEN-END:variables
 }

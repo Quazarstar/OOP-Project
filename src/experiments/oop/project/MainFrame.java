@@ -27,13 +27,25 @@ public class MainFrame extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jButton6 = new javax.swing.JButton();
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
         jButton4 = new javax.swing.JButton();
         jButton5 = new javax.swing.JButton();
+        jButton7 = new javax.swing.JButton();
+        jButton9 = new javax.swing.JButton();
+        jButton8 = new javax.swing.JButton();
+        jButton10 = new javax.swing.JButton();
+        jButton11 = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jButton13 = new javax.swing.JButton();
+        jLabel4 = new javax.swing.JLabel();
         background = new javax.swing.JLabel();
+
+        jButton6.setText("jButton6");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMinimumSize(new java.awt.Dimension(455, 415));
@@ -46,7 +58,7 @@ public class MainFrame extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton1);
-        jButton1.setBounds(173, 117, 140, 35);
+        jButton1.setBounds(150, 120, 140, 35);
 
         jButton2.setText("Biology");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
@@ -55,7 +67,7 @@ public class MainFrame extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton2);
-        jButton2.setBounds(173, 60, 140, 35);
+        jButton2.setBounds(150, 30, 140, 35);
 
         jButton3.setText("Physics");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
@@ -64,7 +76,7 @@ public class MainFrame extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton3);
-        jButton3.setBounds(173, 170, 140, 35);
+        jButton3.setBounds(150, 210, 140, 35);
 
         jButton4.setText("Home");
         jButton4.addActionListener(new java.awt.event.ActionListener() {
@@ -83,12 +95,81 @@ public class MainFrame extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton5);
-        jButton5.setBounds(173, 300, 140, 35);
+        jButton5.setBounds(150, 320, 140, 35);
+
+        jButton7.setText("1-6");
+        jButton7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton7ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButton7);
+        jButton7.setBounds(150, 70, 70, 23);
+
+        jButton9.setText("7-12");
+        jButton9.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton9ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButton9);
+        jButton9.setBounds(220, 70, 70, 23);
+
+        jButton8.setText("1-6");
+        jButton8.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton8ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButton8);
+        jButton8.setBounds(150, 160, 70, 23);
+
+        jButton10.setText("7-10");
+        jButton10.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton10ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButton10);
+        jButton10.setBounds(220, 160, 70, 23);
+
+        jButton11.setText("1-6");
+        jButton11.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton11ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButton11);
+        jButton11.setBounds(150, 250, 70, 23);
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 15)); // NOI18N
         jLabel1.setText("Please select one of the following");
         getContentPane().add(jLabel1);
         jLabel1.setBounds(128, 1, 251, 19);
+
+        jLabel2.setFont(new java.awt.Font("Tahoma", 0, 15)); // NOI18N
+        jLabel2.setText("Pictures");
+        getContentPane().add(jLabel2);
+        jLabel2.setBounds(310, 250, 70, 19);
+
+        jLabel3.setFont(new java.awt.Font("Tahoma", 0, 15)); // NOI18N
+        jLabel3.setText("Pictures");
+        getContentPane().add(jLabel3);
+        jLabel3.setBounds(310, 80, 70, 19);
+
+        jButton13.setText("7-12");
+        jButton13.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton13ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButton13);
+        jButton13.setBounds(220, 250, 70, 23);
+
+        jLabel4.setFont(new java.awt.Font("Tahoma", 0, 15)); // NOI18N
+        jLabel4.setText("Pictures");
+        getContentPane().add(jLabel4);
+        jLabel4.setBounds(310, 160, 70, 19);
 
         background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/experiments/oop/project/6805727-plain-backgrounds.jpg"))); // NOI18N
         background.setText("jLabel1");
@@ -120,7 +201,7 @@ public class MainFrame extends javax.swing.JFrame {
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
             PhysicsFrame myPhysicsFrame = new PhysicsFrame();
             myPhysicsFrame.setVisible(true);
-            dispose();   // TODO add your handling code here:
+            dispose();  
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
@@ -128,6 +209,50 @@ public class MainFrame extends javax.swing.JFrame {
         myMainMenu.setVisible(true);
         dispose();                // TODO add your handling code here:
     }//GEN-LAST:event_jButton4ActionPerformed
+
+    private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
+                BiologyPicture1 myBiologyPicture1= new BiologyPicture1();
+                myBiologyPicture1.setVisible(true);
+                dispose(); 
+                                            
+
+    }//GEN-LAST:event_jButton7ActionPerformed
+
+    private void jButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton9ActionPerformed
+                    BiologyPicture3 myBiologyPicture3 = new BiologyPicture3();
+                myBiologyPicture3.setVisible(true);
+                dispose(); 
+                                        
+// TODO add your handling code here:
+                                       
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton9ActionPerformed
+
+    private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
+                ChemistyPicture1 myChemistyPicture1 = new ChemistyPicture1();
+                myChemistyPicture1.setVisible(true);
+                dispose();               // TODO add your handling code here:
+    }//GEN-LAST:event_jButton8ActionPerformed
+
+    private void jButton10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton10ActionPerformed
+                ChemistryPicture2 myChemistryPicture2 = new ChemistryPicture2();
+                myChemistryPicture2.setVisible(true);
+                dispose();       // TODO add your handling code here:
+    }//GEN-LAST:event_jButton10ActionPerformed
+
+    private void jButton11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton11ActionPerformed
+               PhysicsPicture1 myPhysicsPicture1 = new  PhysicsPicture1();
+                myPhysicsPicture1.setVisible(true);
+                dispose();              
+                           
+                                      // TODO add your handling code here:
+    }//GEN-LAST:event_jButton11ActionPerformed
+
+    private void jButton13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton13ActionPerformed
+                PhysicsPicture2 myPhysicsPicture2 = new  PhysicsPicture2();
+                myPhysicsPicture2.setVisible(true);
+                dispose();                    // TODO add your handling code here:
+    }//GEN-LAST:event_jButton13ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -168,10 +293,20 @@ public class MainFrame extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel background;
     private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton10;
+    private javax.swing.JButton jButton11;
+    private javax.swing.JButton jButton13;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton5;
+    private javax.swing.JButton jButton6;
+    private javax.swing.JButton jButton7;
+    private javax.swing.JButton jButton8;
+    private javax.swing.JButton jButton9;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
     // End of variables declaration//GEN-END:variables
 }

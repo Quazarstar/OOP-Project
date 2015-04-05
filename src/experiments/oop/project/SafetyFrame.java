@@ -30,7 +30,6 @@ public class SafetyFrame extends javax.swing.JFrame {
         jButton1 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTextArea1 = new javax.swing.JTextArea();
         jLabel1 = new javax.swing.JLabel();
@@ -61,26 +60,19 @@ public class SafetyFrame extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton2);
-        jButton2.setBounds(59, 357, 140, 23);
-
-        jButton4.setText("Next page");
-        jButton4.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton4ActionPerformed(evt);
-            }
-        });
-        getContentPane().add(jButton4);
-        jButton4.setBounds(268, 357, 140, 23);
+        jButton2.setBounds(60, 340, 140, 23);
 
         jTextArea1.setEditable(false);
         jTextArea1.setColumns(20);
+        jTextArea1.setFont(new java.awt.Font("Monospaced", 0, 13)); // NOI18N
         jTextArea1.setRows(5);
-        jTextArea1.setText("This is were safety guidelines will go.");
+        jTextArea1.setText("1.No eating or drinking in the lab.\n2.Keep flames away from flammable solutions.\n3.Keep electrics away from water.\n4.Clean all spills immediatly.\n5.Always clean glassware before use.\n6.Always wear a lab coat during experiments.\n7.Always wear safety goggles during experiments.\n8.Never enter without a teacher supervising.\n9.Wear gloves while using chemicals.\n10.Remember to turn off gas after use.");
         jTextArea1.setAutoscrolls(false);
+        jTextArea1.setPreferredSize(new java.awt.Dimension(550, 350));
         jScrollPane1.setViewportView(jTextArea1);
 
         getContentPane().add(jScrollPane1);
-        jScrollPane1.setBounds(70, 50, 330, 192);
+        jScrollPane1.setBounds(20, 40, 410, 200);
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel1.setText("Safety");
@@ -112,12 +104,6 @@ public class SafetyFrame extends javax.swing.JFrame {
         myChemistry2Frame.setVisible(true);
         dispose();       // TODO add your handling code here:
     }//GEN-LAST:event_jButton3ActionPerformed
-
-    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
-        Safety2Frame mySafety2Frame = new Safety2Frame();
-        mySafety2Frame.setVisible(true);
-        dispose();       // TODO add your handling code here:
-    }//GEN-LAST:event_jButton4ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -160,7 +146,6 @@ public class SafetyFrame extends javax.swing.JFrame {
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextArea jTextArea1;

@@ -29,12 +29,14 @@ public class Biology2Frame extends javax.swing.JFrame {
 
         jButton2 = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        jTextArea1 = new javax.swing.JTextArea();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
         background = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setMinimumSize(new java.awt.Dimension(455, 415));
+        setMinimumSize(new java.awt.Dimension(455, 430));
         getContentPane().setLayout(null);
 
         jButton2.setText("Previous page");
@@ -44,22 +46,32 @@ public class Biology2Frame extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton2);
-        jButton2.setBounds(59, 357, 120, 23);
+        jButton2.setBounds(50, 220, 120, 23);
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel1.setText("Biology");
         getContentPane().add(jLabel1);
-        jLabel1.setBounds(172, 0, 51, 17);
+        jLabel1.setBounds(200, 0, 51, 17);
 
-        jTextArea1.setEditable(false);
-        jTextArea1.setColumns(20);
-        jTextArea1.setLineWrap(true);
-        jTextArea1.setRows(5);
-        jTextArea1.setText("Description of general biology equipment and their usage will go here.");
-        jScrollPane1.setViewportView(jTextArea1);
+        jLabel2.setFont(new java.awt.Font("Tahoma", 0, 13)); // NOI18N
+        jLabel2.setText("11. Food samples: used in experiments.");
+        getContentPane().add(jLabel2);
+        jLabel2.setBounds(0, 20, 260, 16);
 
-        getContentPane().add(jScrollPane1);
-        jScrollPane1.setBounds(26, 50, 410, 200);
+        jLabel3.setFont(new java.awt.Font("Tahoma", 0, 13)); // NOI18N
+        jLabel3.setText("12. Microscope: used to examine objects and experiment outcomes.");
+        getContentPane().add(jLabel3);
+        jLabel3.setBounds(0, 50, 400, 16);
+
+        jLabel4.setFont(new java.awt.Font("Tahoma", 0, 13)); // NOI18N
+        jLabel4.setText("13. Petri Dish: used to culture cells. ");
+        getContentPane().add(jLabel4);
+        jLabel4.setBounds(0, 80, 230, 16);
+
+        jLabel5.setFont(new java.awt.Font("Tahoma", 0, 13)); // NOI18N
+        jLabel5.setText("14. Dropper: used to drop small amounts of liquid.");
+        getContentPane().add(jLabel5);
+        jLabel5.setBounds(0, 110, 310, 16);
 
         background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/experiments/oop/project/6805727-plain-backgrounds.jpg"))); // NOI18N
         background.setText("jLabel1");
@@ -115,7 +127,9 @@ public class Biology2Frame extends javax.swing.JFrame {
     private javax.swing.JLabel background;
     private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTextArea jTextArea1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
     // End of variables declaration//GEN-END:variables
 }

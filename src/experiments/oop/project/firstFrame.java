@@ -3,6 +3,7 @@ package experiments.oop.project;
 
 import experiments.oop.project.MainMenu;
 
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -113,10 +114,22 @@ public class firstFrame extends javax.swing.JFrame {
         
     }//GEN-LAST:event_firstFrameSubmitActionPerformed
 
+    
     private void CycleSelectComboActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CycleSelectComboActionPerformed
-        // TODO add your handling code here:
+        // TODO add your handling code here: 
+        
+       
+        
+        
+        
+        
+        
+       
+       
+       
+       
     }//GEN-LAST:event_CycleSelectComboActionPerformed
-
+    
     private void subjectSelectComboActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_subjectSelectComboActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_subjectSelectComboActionPerformed
