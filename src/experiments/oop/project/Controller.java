@@ -94,7 +94,7 @@ public class Controller {
     }
     
     public void checker(){
-        JOptionPane.showMessageDialog(null, area + "Cycle => " + cycle + ". Subject => " + subject + ". Area => " + area + ".");
+        JOptionPane.showMessageDialog(null,"Cycle => " + cycle + ". Subject => " + subject);
     
     } 
 }

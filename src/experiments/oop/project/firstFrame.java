@@ -106,7 +106,15 @@ public class firstFrame extends javax.swing.JFrame {
 
     private void firstFrameSubmitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_firstFrameSubmitActionPerformed
         // TODO add your handling code here:
-          
+        
+        Controller myC = new Controller();
+        myC.setCycle(CycleSelectCombo.getSelectedItem().toString());
+        myC.setSubject(subjectSelectCombo.getSelectedItem().toString());
+        myC.writeCycle();
+        myC.writeSubject();
+        myC.checker();
+        
+        
         MainMenu myMainMenuApp = new MainMenu();
         myMainMenuApp.setVisible(true);
         dispose();
@@ -118,16 +126,7 @@ public class firstFrame extends javax.swing.JFrame {
     private void CycleSelectComboActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CycleSelectComboActionPerformed
         // TODO add your handling code here: 
         
-       
         
-        
-        
-        
-        
-       
-       
-       
-       
     }//GEN-LAST:event_CycleSelectComboActionPerformed
     
     private void subjectSelectComboActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_subjectSelectComboActionPerformed
