@@ -39,7 +39,7 @@ public class Controller {
         return cycle;
     }
     
-    public String getSubect(){
+    public String getSubject(){
         return subject;
     }
     
