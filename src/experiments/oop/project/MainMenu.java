@@ -109,8 +109,9 @@ public class MainMenu extends javax.swing.JFrame {
         Controller myC = new Controller();
         myC.setArea("Equipment");
         myC.writeArea();
+        myC.readIn();
         
-        
+        /** Once you've added in your own code, delete the calls below **/
         
         MainFrame myMainFrame = new MainFrame();
         myMainFrame.setVisible(true);
@@ -121,7 +122,9 @@ public class MainMenu extends javax.swing.JFrame {
         Controller myC = new Controller();
         myC.setArea("Experiments");
         myC.writeArea();
+        myC.readIn();
         
+        /** Once you've added in your own code, delete the calls below **/
         OOProjectExperimentsMain OOProjectExperimentsMain = new OOProjectExperimentsMain();
         OOProjectExperimentsMain.setVisible(true);
         dispose();
@@ -131,7 +134,9 @@ public class MainMenu extends javax.swing.JFrame {
         Controller myC = new Controller();
         myC.setArea("Questions");
         myC.writeArea();
+        myC.readIn();
         
+        /** Once you've added in your own code, delete the calls below **/
         FormAndQsGUI myMain = new FormAndQsGUI();
         myMain.setVisible(true);
         dispose();
