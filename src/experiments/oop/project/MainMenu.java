@@ -125,9 +125,27 @@ public class MainMenu extends javax.swing.JFrame {
         myC.readIn();
         
         /** Once you've added in your own code, delete the calls below **/
-        OOProjectExperimentsMain OOProjectExperimentsMain = new OOProjectExperimentsMain();
-        OOProjectExperimentsMain.setVisible(true);
-        dispose();
+        if(myC.getSubject().equals("Biology") && myC.getCycle().equals("Senior Cycle")) {Hl1 myHl1 = new Hl1();
+        myHl1.setVisible(true);
+        dispose();}
+        else if(myC.getSubject().equals("Chemistry") && myC.getCycle().equals("Senior Cycle")){Hl2 myHl2 = new Hl2();
+        myHl2.setVisible(true);
+        dispose();}
+        else if(myC.getSubject().equals("Physics") && myC.getCycle().equals("Senior Cycle")){Hl3 myHl3 = new Hl3();
+        myHl3.setVisible(true);
+        dispose();}
+        else if(myC.getSubject().equals("Biology") && myC.getCycle().equals("Junior Cycle")) {Ol1 myOl1 = new Ol1();
+        myOl1.setVisible(true);
+        dispose();}
+        else if(myC.getSubject().equals("Chemistry") && myC.getCycle().equals("Junior Cycle")) {Ol2 myOl2 = new Ol2();
+        myOl2.setVisible(true);
+        dispose();}
+        else if(myC.getSubject().equals("Physics") && myC.getCycle().equals("Junior Cycle")){Ol3 myOl3 = new Ol3();
+        myOl3.setVisible(true);
+        dispose();}
+        else {OOProjectExperimentsMain myOOProjectExperimentsMain = new OOProjectExperimentsMain();
+        myOOProjectExperimentsMain.setVisible(true);
+        dispose();}
     }//GEN-LAST:event_experimentsButtonActionPerformed
 
     private void questionsButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_questionsButtonActionPerformed
