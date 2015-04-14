@@ -28,7 +28,6 @@ public class Ol2 extends javax.swing.JFrame {
     private void initComponents() {
 
         placeholderol2 = new javax.swing.JLabel();
-        backOl2 = new javax.swing.JButton();
         homeButtonOL2 = new javax.swing.JButton();
         imageol2 = new javax.swing.JButton();
         stepsOl2 = new javax.swing.JButton();
@@ -46,15 +45,6 @@ public class Ol2 extends javax.swing.JFrame {
         getContentPane().add(placeholderol2);
         placeholderol2.setBounds(130, 30, 180, 100);
 
-        backOl2.setText("Back");
-        backOl2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                backOl2ActionPerformed(evt);
-            }
-        });
-        getContentPane().add(backOl2);
-        backOl2.setBounds(0, 0, 80, 23);
-
         homeButtonOL2.setText("Home");
         homeButtonOL2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -62,7 +52,7 @@ public class Ol2 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(homeButtonOL2);
-        homeButtonOL2.setBounds(0, 20, 80, 23);
+        homeButtonOL2.setBounds(0, 0, 80, 23);
 
         imageol2.setText("Click to see image of experiement.");
         imageol2.addActionListener(new java.awt.event.ActionListener() {
@@ -100,7 +90,7 @@ public class Ol2 extends javax.swing.JFrame {
         jScrollPane1.setBounds(10, 160, 420, 210);
 
         Chemistryheader.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        Chemistryheader.setText("Chemistry experiment");
+        Chemistryheader.setText("Chemestry experiment");
         getContentPane().add(Chemistryheader);
         Chemistryheader.setBounds(140, 0, 320, 30);
 
@@ -111,12 +101,6 @@ public class Ol2 extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void backOl2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backOl2ActionPerformed
-        OOProjectOrdinaryLevel myOOProjectOrdinaryLevel = new OOProjectOrdinaryLevel();
-        myOOProjectOrdinaryLevel.setVisible(true);
-        dispose();
-    }//GEN-LAST:event_backOl2ActionPerformed
 
     private void homeButtonOL2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_homeButtonOL2ActionPerformed
         MainMenu myMainMenu = new MainMenu();
@@ -174,7 +158,6 @@ public class Ol2 extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel Chemistryheader;
-    private javax.swing.JButton backOl2;
     private javax.swing.JLabel backgroundOl2;
     private javax.swing.JLabel descOl2;
     private javax.swing.JButton homeButtonOL2;

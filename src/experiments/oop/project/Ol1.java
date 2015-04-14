@@ -28,7 +28,6 @@ public class Ol1 extends javax.swing.JFrame {
     private void initComponents() {
 
         placeholderol1 = new javax.swing.JLabel();
-        backOl1 = new javax.swing.JButton();
         homeButtonOL1 = new javax.swing.JButton();
         imageol1 = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
@@ -46,15 +45,6 @@ public class Ol1 extends javax.swing.JFrame {
         getContentPane().add(placeholderol1);
         placeholderol1.setBounds(130, 30, 180, 100);
 
-        backOl1.setText("Back");
-        backOl1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                backOl1ActionPerformed(evt);
-            }
-        });
-        getContentPane().add(backOl1);
-        backOl1.setBounds(0, 0, 80, 23);
-
         homeButtonOL1.setText("Home");
         homeButtonOL1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -62,7 +52,7 @@ public class Ol1 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(homeButtonOL1);
-        homeButtonOL1.setBounds(0, 20, 80, 23);
+        homeButtonOL1.setBounds(0, 0, 80, 23);
 
         imageol1.setText("Click to see image of experiement.");
         imageol1.addActionListener(new java.awt.event.ActionListener() {
@@ -111,12 +101,6 @@ public class Ol1 extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void backOl1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backOl1ActionPerformed
-        OOProjectOrdinaryLevel myOOProjectOrdinaryLevel = new OOProjectOrdinaryLevel();
-        myOOProjectOrdinaryLevel.setVisible(true);
-        dispose();
-    }//GEN-LAST:event_backOl1ActionPerformed
 
     private void stepsOl1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_stepsOl1ActionPerformed
         Ol1steps myOl1steps = new Ol1steps();
@@ -173,7 +157,6 @@ public class Ol1 extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel Biologyheader;
-    private javax.swing.JButton backOl1;
     private javax.swing.JLabel backgroundOl1;
     private javax.swing.JLabel descOl1;
     private javax.swing.JButton homeButtonOL1;

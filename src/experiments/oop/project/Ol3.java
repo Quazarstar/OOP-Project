@@ -28,7 +28,6 @@ public class Ol3 extends javax.swing.JFrame {
     private void initComponents() {
 
         placeholderol3 = new javax.swing.JLabel();
-        backOl3 = new javax.swing.JButton();
         homeButtonOL3 = new javax.swing.JButton();
         imageol2 = new javax.swing.JButton();
         stepsOl3 = new javax.swing.JButton();
@@ -46,15 +45,6 @@ public class Ol3 extends javax.swing.JFrame {
         getContentPane().add(placeholderol3);
         placeholderol3.setBounds(130, 30, 180, 100);
 
-        backOl3.setText("Back");
-        backOl3.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                backOl3ActionPerformed(evt);
-            }
-        });
-        getContentPane().add(backOl3);
-        backOl3.setBounds(0, 0, 80, 23);
-
         homeButtonOL3.setText("Home");
         homeButtonOL3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -62,7 +52,7 @@ public class Ol3 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(homeButtonOL3);
-        homeButtonOL3.setBounds(0, 20, 80, 23);
+        homeButtonOL3.setBounds(0, 0, 80, 23);
 
         imageol2.setText("Click to see image of experiement.");
         imageol2.addActionListener(new java.awt.event.ActionListener() {
@@ -111,12 +101,6 @@ public class Ol3 extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void backOl3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backOl3ActionPerformed
-        OOProjectOrdinaryLevel myOOProjectOrdinaryLevel = new OOProjectOrdinaryLevel();
-        myOOProjectOrdinaryLevel.setVisible(true);
-        dispose();
-    }//GEN-LAST:event_backOl3ActionPerformed
 
     private void homeButtonOL3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_homeButtonOL3ActionPerformed
         MainMenu myMainMenu = new MainMenu();
@@ -173,7 +157,6 @@ public class Ol3 extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel Physicshead;
-    private javax.swing.JButton backOl3;
     private javax.swing.JLabel backgroundOl3;
     private javax.swing.JLabel descOl3;
     private javax.swing.JButton homeButtonOL3;

@@ -29,7 +29,6 @@ public class Hl3 extends javax.swing.JFrame {
 
         hl3placeholder = new javax.swing.JLabel();
         imageol2 = new javax.swing.JButton();
-        backEx3 = new javax.swing.JButton();
         Hl3desc = new javax.swing.JLabel();
         hl3steps = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
@@ -54,15 +53,6 @@ public class Hl3 extends javax.swing.JFrame {
         });
         getContentPane().add(imageol2);
         imageol2.setBounds(110, 350, 230, 23);
-
-        backEx3.setText("Back");
-        backEx3.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                backEx3ActionPerformed(evt);
-            }
-        });
-        getContentPane().add(backEx3);
-        backEx3.setBounds(0, 0, 80, 23);
 
         Hl3desc.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         Hl3desc.setText("Description of experiment. Click here to go to steps:");
@@ -97,7 +87,7 @@ public class Hl3 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(homeButtonHL);
-        homeButtonHL.setBounds(0, 20, 80, 23);
+        homeButtonHL.setBounds(0, 0, 80, 23);
 
         Physicshead.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         Physicshead.setText("Physics Experiment");
@@ -111,12 +101,6 @@ public class Hl3 extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void backEx3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backEx3ActionPerformed
-        OOProjectHigherLevel myOOProjectHigherLevel = new OOProjectHigherLevel();
-        myOOProjectHigherLevel.setVisible(true);
-        dispose();          // TODO add your handling code here:
-    }//GEN-LAST:event_backEx3ActionPerformed
 
     private void hl3stepsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_hl3stepsActionPerformed
         Hl3steps myHl3steps = new Hl3steps();
@@ -174,7 +158,6 @@ public class Hl3 extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel Hl3desc;
     private javax.swing.JLabel Physicshead;
-    private javax.swing.JButton backEx3;
     private javax.swing.JLabel backgroundEx3;
     private javax.swing.JLabel hl3placeholder;
     private javax.swing.JButton hl3steps;

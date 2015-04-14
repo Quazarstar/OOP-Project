@@ -27,7 +27,6 @@ public class Hl2 extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        backEx2 = new javax.swing.JButton();
         imageol2 = new javax.swing.JButton();
         hl2placeholder = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
@@ -41,15 +40,6 @@ public class Hl2 extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMinimumSize(new java.awt.Dimension(455, 415));
         getContentPane().setLayout(null);
-
-        backEx2.setText("Back");
-        backEx2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                backEx2ActionPerformed(evt);
-            }
-        });
-        getContentPane().add(backEx2);
-        backEx2.setBounds(0, 0, 80, 23);
 
         imageol2.setText("Click to see image of experiement.");
         imageol2.addActionListener(new java.awt.event.ActionListener() {
@@ -97,10 +87,10 @@ public class Hl2 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(homeButtonHL);
-        homeButtonHL.setBounds(0, 20, 80, 23);
+        homeButtonHL.setBounds(0, 0, 80, 23);
 
         Chemistryheader.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        Chemistryheader.setText("Chemistry experiment");
+        Chemistryheader.setText("Chemestry experiment");
         getContentPane().add(Chemistryheader);
         Chemistryheader.setBounds(140, 0, 320, 30);
 
@@ -111,12 +101,6 @@ public class Hl2 extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void backEx2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backEx2ActionPerformed
-        OOProjectHigherLevel myOOProjectHigherLevel = new OOProjectHigherLevel();
-        myOOProjectHigherLevel.setVisible(true);
-        dispose();          // TODO add your handling code here:
-    }//GEN-LAST:event_backEx2ActionPerformed
 
     private void hl2stepsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_hl2stepsActionPerformed
         Hl2steps myHl2steps = new Hl2steps();
@@ -174,7 +158,6 @@ public class Hl2 extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel Chemistryheader;
     private javax.swing.JLabel Hl2desc;
-    private javax.swing.JButton backEx2;
     private javax.swing.JLabel backgroundEx2;
     private javax.swing.JLabel hl2placeholder;
     private javax.swing.JButton hl2steps;

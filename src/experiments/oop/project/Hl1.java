@@ -30,7 +30,6 @@ public class Hl1 extends javax.swing.JFrame {
         homeButtonHL = new javax.swing.JButton();
         imageol2 = new javax.swing.JButton();
         hl1placeholder = new javax.swing.JLabel();
-        backEx1 = new javax.swing.JButton();
         hl1steps = new javax.swing.JButton();
         Hl1desc = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
@@ -49,7 +48,7 @@ public class Hl1 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(homeButtonHL);
-        homeButtonHL.setBounds(0, 20, 80, 23);
+        homeButtonHL.setBounds(0, 0, 80, 23);
 
         imageol2.setText("Click to see image of experiement.");
         imageol2.addActionListener(new java.awt.event.ActionListener() {
@@ -63,15 +62,6 @@ public class Hl1 extends javax.swing.JFrame {
         hl1placeholder.setIcon(new javax.swing.ImageIcon(getClass().getResource("/experiments/oop/project/art4098_1.jpg"))); // NOI18N
         getContentPane().add(hl1placeholder);
         hl1placeholder.setBounds(130, 30, 180, 100);
-
-        backEx1.setText("Back");
-        backEx1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                backEx1ActionPerformed(evt);
-            }
-        });
-        getContentPane().add(backEx1);
-        backEx1.setBounds(0, 0, 80, 23);
 
         hl1steps.setText("Steps");
         hl1steps.addActionListener(new java.awt.event.ActionListener() {
@@ -111,12 +101,6 @@ public class Hl1 extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void backEx1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backEx1ActionPerformed
-        OOProjectHigherLevel myOOProjectHigherLevel = new OOProjectHigherLevel();
-        myOOProjectHigherLevel.setVisible(true);
-        dispose();          // TODO add your handling code here:
-    }//GEN-LAST:event_backEx1ActionPerformed
 
     private void hl1stepsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_hl1stepsActionPerformed
         Hl1steps myHl1steps = new Hl1steps();
@@ -175,7 +159,6 @@ public class Hl1 extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel Biologyheader;
     private javax.swing.JLabel Hl1desc;
-    private javax.swing.JButton backEx1;
     private javax.swing.JLabel backgroundEx1;
     private javax.swing.JLabel hl1placeholder;
     private javax.swing.JButton hl1steps;
