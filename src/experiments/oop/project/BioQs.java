@@ -29,7 +29,9 @@ private int BACount;
        
         initComponents();
     }
-
+    private void hideRadioButtons(){
+    
+    }
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -122,10 +124,28 @@ int nextBio = 0;
         int Bcount = 0;
 while(Bcount <= nextBio){
     if(nextBio==1){
-        Bnextq.setVisible(false);
+        
     bqField.setText("Question 2:complete the sentence"
             + "\n The molecules are moved and \n converted in the area are \n" +
 "called the _______");
+    }
+    else if(nextBio==2){
+        
+    bqField.setText("Question 3:When the ATP is used "
+            + "to \n make glucose what is the cycle\n"
+            + "called the _______ cycle");
+    }
+    else if(nextBio==3){
+    
+    bqField.setText("Question 4:complete the sentence"
+            + "\nthe process of photosynthesis"
+            + "\n is devided into 2 parts the "
+            + "\nlight dependant reaction and "
+            + "\nthe light _____ reaction?");
+    }
+    else if(nextBio==4){
+    BAfield.setVisible(false);
+    BAfield.setEnabled(false);
     }
 Bcount++;
 }
@@ -152,14 +172,14 @@ Bsubmit.setEnabled(true);
          int confirmAns = 0;
         int number = 0;
         
-        String confirm[] = new String[2];
+        String confirm[] = new String[3];
         confirm[0] = "Correct!";
         confirm[1] = "incorrect";
        
         String Correct[] = new String[2];
         Correct[0]= "chloroplast";
         Correct[1]= "stroma";
-       
+       Correct[2]="calvin";
         
         for(int i = 0; i < Bqlist.size();i++){
             if(Bqlist.get(i).getAnswer().equals(Correct[i])){
