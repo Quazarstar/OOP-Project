@@ -143,7 +143,7 @@ private int CACount;
 int nextChem = 0;
     private void CnextqActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CnextqActionPerformed
         // TODO add your handling code here:
-                nextChem++;
+               nextChem++;
         int Ccount = 0;
 while(Ccount <= nextChem){
     if(nextChem==1){
@@ -153,7 +153,7 @@ while(Ccount <= nextChem){
     }
 Ccount++;
 }
-
+Csubmit.setEnabled(true);
     }//GEN-LAST:event_CnextqActionPerformed
 
     private void CsubmitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CsubmitActionPerformed
@@ -166,20 +166,32 @@ Ccount++;
         Cqlist.add(q);
         
         CACount++;
+        Csubmit.setEnabled(false);
     }//GEN-LAST:event_CsubmitActionPerformed
 
     private void DisplayAnsCActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DisplayAnsCActionPerformed
         // TODO add your handling code here:
-            int number = 0;
+        int confirmAns = 0;   
+        int number = 0;
+        
+        String confirm[] = new String[2];
+        confirm[0] = "Correct!";
+        confirm[1] = "incorrect";
         
         String Correct[] = new String[2];
-        Correct[0]= " The correct answer is red";
-        Correct[1]= " The correct answer is stroma";
-       // for(int j=0;j<Correct.length;j++){
+        Correct[0]= "red";
+        Correct[1]= "yes";
+       
         for(int i = 0; i < Cqlist.size();i++){
+            if(Cqlist.get(i).getAnswer().equals(Correct[i])){
+             confirmAns = 0;
+            }
+            else{
+            confirmAns = 1;
+            }
             number++;
-            JOptionPane.showMessageDialog(null,"for question "+number+" your answer is: "+ Cqlist.get(i).getAnswer()+Correct[i]);
-        }//}
+            JOptionPane.showMessageDialog(null,"for question "+number+" your answer is: "+ Cqlist.get(i).getAnswer()+" It is "+confirm[confirmAns]+" The correct answer is: "+Correct[i]);
+        }
         
     }//GEN-LAST:event_DisplayAnsCActionPerformed
 

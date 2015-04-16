@@ -153,7 +153,7 @@ while(Pcount <= nextPhys){
     }
 Pcount++;
 }
-
+Psubmit.setEnabled(true);
     }//GEN-LAST:event_PnextqActionPerformed
 
     private void PsubmitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PsubmitActionPerformed
@@ -167,20 +167,31 @@ Pcount++;
         Pqlist.add(q);
         
         PACount++;
+        Psubmit.setEnabled(false);
     }//GEN-LAST:event_PsubmitActionPerformed
 
     private void DisplayAnsPActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DisplayAnsPActionPerformed
         // TODO add your handling code here:
+          int confirmAns = 0; 
             int number = 0;
+        String confirm[] = new String[2];
+        confirm[0] = "Correct!";
+        confirm[1] = "incorrect";
         
         String Correct[] = new String[2];
-        Correct[0]= " The correct answer is refraction";
-        Correct[1]= " The correct answer is a prism";
-       // for(int j=0;j<Correct.length;j++){
+        Correct[0]= "refraction";
+        Correct[1]= "prism";
+       
         for(int i = 0; i < Pqlist.size();i++){
+            if(Pqlist.get(i).getAnswer().equals(Correct[i])){
+             confirmAns = 0;
+            }
+            else{
+            confirmAns = 1;
+            }
             number++;
-            JOptionPane.showMessageDialog(null,"for question "+number+" your answer is: "+ Pqlist.get(i).getAnswer()+Correct[i]);
-        }//}
+            JOptionPane.showMessageDialog(null,"for question "+number+" your answer is: "+ Pqlist.get(i).getAnswer()+" It is "+confirm[confirmAns]+" The correct answer is: "+Correct[i]);
+        }
         
     }//GEN-LAST:event_DisplayAnsPActionPerformed
 

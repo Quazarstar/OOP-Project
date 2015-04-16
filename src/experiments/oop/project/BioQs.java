@@ -118,7 +118,7 @@ private int BACount;
 int nextBio = 0;
     private void BnextqActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BnextqActionPerformed
         // TODO add your handling code here:
-        nextBio++;
+         nextBio++;
         int Bcount = 0;
 while(Bcount <= nextBio){
     if(nextBio==1){
@@ -129,13 +129,13 @@ while(Bcount <= nextBio){
     }
 Bcount++;
 }
-
+Bsubmit.setEnabled(true);
         
     }//GEN-LAST:event_BnextqActionPerformed
 
     private void BsubmitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BsubmitActionPerformed
         // get text from text field
-        Banswer = BAfield.getText();
+         Banswer = BAfield.getText();
         
         Question q = new Question();
         q.setAnswer(Banswer);
@@ -144,20 +144,33 @@ Bcount++;
         Bqlist.add(q);
         
         BACount++;
+        Bsubmit.setEnabled(false);
     }//GEN-LAST:event_BsubmitActionPerformed
 
     private void DisplayAnsBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DisplayAnsBActionPerformed
         // TODO add your handling code here:
+         int confirmAns = 0;
         int number = 0;
         
+        String confirm[] = new String[2];
+        confirm[0] = "Correct!";
+        confirm[1] = "incorrect";
+       
         String Correct[] = new String[2];
-        Correct[0]= " The correct answer is chloroplast";
-        Correct[1]= " The correct answer is stroma";
-       // for(int j=0;j<Correct.length;j++){
+        Correct[0]= "chloroplast";
+        Correct[1]= "stroma";
+       
+        
         for(int i = 0; i < Bqlist.size();i++){
+            if(Bqlist.get(i).getAnswer().equals(Correct[i])){
+             confirmAns = 0;
+            }
+            else{
+            confirmAns = 1;
+            }
             number++;
-            JOptionPane.showMessageDialog(null,"for question "+number+" your answer is: "+ Bqlist.get(i).getAnswer()+Correct[i]);
-        }//}
+            JOptionPane.showMessageDialog(null,"for question "+number+" your answer is: "+ Bqlist.get(i).getAnswer()+" It is "+confirm[confirmAns]+" The correct answer is: "+Correct[i]);
+        }
         
     }//GEN-LAST:event_DisplayAnsBActionPerformed
 
