@@ -23,14 +23,17 @@ private int BACount;
      */
     Question a = new Question();
     public BioQs() {
+        initComponents();
         Bqlist = new ArrayList <>();
         Banswer = new String();
         BACount = 0;
-       
-        initComponents();
+        
+  
+        hideRadioButtons();
     }
     private void hideRadioButtons(){
-    
+    jRadioButton1.setVisible(false);
+    jRadioButton2.setVisible(false);
     }
     /**
      * This method is called from within the constructor to initialize the form.
@@ -49,6 +52,8 @@ private int BACount;
         jScrollPane2 = new javax.swing.JScrollPane();
         bqField = new javax.swing.JTextArea();
         DisplayAnsB = new javax.swing.JButton();
+        jRadioButton1 = new javax.swing.JRadioButton();
+        jRadioButton2 = new javax.swing.JRadioButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMinimumSize(new java.awt.Dimension(455, 415));
@@ -61,7 +66,7 @@ private int BACount;
             }
         });
         getContentPane().add(back);
-        back.setBounds(0, 0, 57, 23);
+        back.setBounds(0, 0, 55, 23);
 
         BAfield.setColumns(20);
         BAfield.setRows(5);
@@ -78,7 +83,7 @@ private int BACount;
             }
         });
         getContentPane().add(Bnextq);
-        Bnextq.setBounds(370, 360, 57, 23);
+        Bnextq.setBounds(370, 360, 55, 23);
 
         Bsubmit.setText("submit");
         Bsubmit.addActionListener(new java.awt.event.ActionListener() {
@@ -106,7 +111,20 @@ private int BACount;
             }
         });
         getContentPane().add(DisplayAnsB);
-        DisplayAnsB.setBounds(190, 320, 130, 23);
+        DisplayAnsB.setBounds(190, 360, 130, 23);
+
+        jRadioButton1.setText("jRadioButton1");
+        jRadioButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jRadioButton1ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jRadioButton1);
+        jRadioButton1.setBounds(60, 290, 93, 23);
+
+        jRadioButton2.setText("jRadioButton2");
+        getContentPane().add(jRadioButton2);
+        jRadioButton2.setBounds(60, 340, 93, 23);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -146,6 +164,7 @@ while(Bcount <= nextBio){
     else if(nextBio==4){
     BAfield.setVisible(false);
     BAfield.setEnabled(false);
+    jScrollPane1.setVisible(false);
     }
 Bcount++;
 }
@@ -179,8 +198,8 @@ Bsubmit.setEnabled(true);
         String Correct[] = new String[2];
         Correct[0]= "chloroplast";
         Correct[1]= "stroma";
-       Correct[2]="calvin";
-        
+        Correct[2]="calvin";
+        Correct[3]="independant";
         for(int i = 0; i < Bqlist.size();i++){
             if(Bqlist.get(i).getAnswer().equals(Correct[i])){
              confirmAns = 0;
@@ -193,6 +212,10 @@ Bsubmit.setEnabled(true);
         }
         
     }//GEN-LAST:event_DisplayAnsBActionPerformed
+
+    private void jRadioButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jRadioButton1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -232,6 +255,8 @@ Bsubmit.setEnabled(true);
     private javax.swing.JButton DisplayAnsB;
     private javax.swing.JButton back;
     private javax.swing.JTextArea bqField;
+    private javax.swing.JRadioButton jRadioButton1;
+    private javax.swing.JRadioButton jRadioButton2;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     // End of variables declaration//GEN-END:variables

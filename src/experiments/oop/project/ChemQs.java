@@ -96,7 +96,9 @@ private int CACount;
                 .addComponent(Back)
                 .addGap(0, 0, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
+                .addGap(0, 171, Short.MAX_VALUE)
+                .addComponent(DisplayAnsC)
+                .addGap(59, 59, 59)
                 .addComponent(Cnextq)
                 .addGap(59, 59, 59))
             .addGroup(layout.createSequentialGroup()
@@ -108,10 +110,7 @@ private int CACount;
                             .addComponent(jScrollPane1)))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(191, 191, 191)
-                        .addComponent(Csubmit))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(171, 171, 171)
-                        .addComponent(DisplayAnsC)))
+                        .addComponent(Csubmit)))
                 .addContainerGap(93, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -124,10 +123,10 @@ private int CACount;
                 .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(Csubmit)
-                .addGap(18, 18, 18)
-                .addComponent(DisplayAnsC)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(Cnextq)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 81, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(Cnextq)
+                    .addComponent(DisplayAnsC))
                 .addGap(35, 35, 35))
         );
 
