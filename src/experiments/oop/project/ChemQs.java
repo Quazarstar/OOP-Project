@@ -24,9 +24,12 @@ private int CACount;
          Cqlist = new ArrayList <>();
         Canswer = new String();
         CACount = 0;
-       
+       hideRadioButtons();
     }
-
+private void hideRadioButtons(){
+    cradio1q1.setVisible(false);
+    cradio2q1.setVisible(false);
+    }
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -40,10 +43,11 @@ private int CACount;
         Csubmit = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         cqField = new javax.swing.JTextArea();
-        jScrollPane2 = new javax.swing.JScrollPane();
-        CAfield = new javax.swing.JTextArea();
         Cnextq = new javax.swing.JButton();
         DisplayAnsC = new javax.swing.JButton();
+        cAns = new javax.swing.JTextField();
+        cradio1q1 = new javax.swing.JRadioButton();
+        cradio2q1 = new javax.swing.JRadioButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMinimumSize(new java.awt.Dimension(455, 415));
@@ -69,11 +73,6 @@ private int CACount;
         cqField.setText("Question 1: what color does \nlitmus paper make when dipped in \nacid?");
         jScrollPane1.setViewportView(cqField);
 
-        CAfield.setColumns(20);
-        CAfield.setRows(5);
-        CAfield.setText("Please enter answer here!");
-        jScrollPane2.setViewportView(CAfield);
-
         Cnextq.setText("next");
         Cnextq.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -85,6 +84,22 @@ private int CACount;
         DisplayAnsC.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 DisplayAnsCActionPerformed(evt);
+            }
+        });
+
+        cAns.setText("Please enter answer here!");
+
+        cradio1q1.setText("OH- ions");
+        cradio1q1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cradio1q1ActionPerformed(evt);
+            }
+        });
+
+        cradio2q1.setText("H+ ions");
+        cradio2q1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cradio2q1ActionPerformed(evt);
             }
         });
 
@@ -104,14 +119,18 @@ private int CACount;
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(90, 90, 90)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 272, Short.MAX_VALUE)
-                            .addComponent(jScrollPane1)))
+                        .addGap(194, 194, 194)
+                        .addComponent(Csubmit))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(191, 191, 191)
-                        .addComponent(Csubmit)))
-                .addContainerGap(93, Short.MAX_VALUE))
+                        .addGap(90, 90, 90)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 272, Short.MAX_VALUE)
+                                .addComponent(cAns))
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                .addComponent(cradio2q1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(cradio1q1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 111, Short.MAX_VALUE)))))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -120,10 +139,14 @@ private int CACount;
                 .addGap(23, 23, 23)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(29, 29, 29)
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(cAns, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(43, 43, 43)
+                .addComponent(cradio1q1)
+                .addGap(33, 33, 33)
+                .addComponent(cradio2q1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 32, Short.MAX_VALUE)
                 .addComponent(Csubmit)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 81, Short.MAX_VALUE)
+                .addGap(53, 53, 53)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(Cnextq)
                     .addComponent(DisplayAnsC))
@@ -142,13 +165,35 @@ private int CACount;
 int nextChem = 0;
     private void CnextqActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CnextqActionPerformed
         // TODO add your handling code here:
+        String cQuestion[] = new String[5];
+        cQuestion[1]="Question 2: yes or no answer"
+            + "\nDo lemons count as acidic? ";
+        cQuestion[2]="Question 3: fill in the gap"
+                + "\nacids are ______ donors";
+        cQuestion[3]="Question 4:What do bases tast"
+                + "\nlike?";
+        cQuestion[4]="Question 5: what ions do acids"
+                + "\n produce in aqueous solutions";
                nextChem++;
         int Ccount = 0;
 while(Ccount <= nextChem){
     if(nextChem==1){
-        Cnextq.setVisible(false);
-    cqField.setText("Question 2: yes or no answer"
-            + "\nDo lemons count as acidic? ");
+        
+    cqField.setText(cQuestion[1]);
+    }
+    else if(nextChem==2){
+    cqField.setText(cQuestion[2]);
+    }
+    else if(nextChem==3){
+    cqField.setText(cQuestion[3]);
+    }
+    else{
+    cAns.setVisible(false);
+    Cnextq.setVisible(false);
+    Csubmit.setVisible(false);
+    cradio1q1.setVisible(true);
+    cradio2q1.setVisible(true);
+    cqField.setText(cQuestion[4]);
     }
 Ccount++;
 }
@@ -156,7 +201,7 @@ Csubmit.setEnabled(true);
     }//GEN-LAST:event_CnextqActionPerformed
 
     private void CsubmitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CsubmitActionPerformed
-        Canswer = CAfield.getText();
+        Canswer = cAns.getText();
         
         Question q = new Question();
         q.setAnswer(Canswer);
@@ -177,9 +222,11 @@ Csubmit.setEnabled(true);
         confirm[0] = "Correct!";
         confirm[1] = "incorrect";
         
-        String Correct[] = new String[2];
+        String Correct[] = new String[4];
         Correct[0]= "red";
         Correct[1]= "yes";
+        Correct[2]="proton";
+        Correct[3]="bitter";
        
         for(int i = 0; i < Cqlist.size();i++){
             if(Cqlist.get(i).getAnswer().equals(Correct[i])){
@@ -191,8 +238,33 @@ Csubmit.setEnabled(true);
             number++;
             JOptionPane.showMessageDialog(null,"for question "+number+" your answer is: "+ Cqlist.get(i).getAnswer()+" It is "+confirm[confirmAns]+" The correct answer is: "+Correct[i]);
         }
+           if(radioAns==1){
+        JOptionPane.showMessageDialog(null,"You chose the first answer and it is incorrect");
+        }
+        else if(radioAns==2){
+        JOptionPane.showMessageDialog(null,"You chose the second answer and it is correct");
+        }
+        else{
+        JOptionPane.showMessageDialog(null,"you havnt dont the question yet");
+        }
         
     }//GEN-LAST:event_DisplayAnsCActionPerformed
+int radioAns = 0;
+    private void cradio1q1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cradio1q1ActionPerformed
+        // TODO add your handling code here:
+         cradio1q1.setEnabled(false);
+        cradio2q1.setEnabled(false);
+        
+        radioAns = 1;
+    }//GEN-LAST:event_cradio1q1ActionPerformed
+
+    private void cradio2q1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cradio2q1ActionPerformed
+        // TODO add your handling code here:
+         cradio1q1.setEnabled(false);
+        cradio2q1.setEnabled(false);
+        
+        radioAns = 2;
+    }//GEN-LAST:event_cradio2q1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -231,12 +303,13 @@ Csubmit.setEnabled(true);
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton Back;
-    private javax.swing.JTextArea CAfield;
     private javax.swing.JButton Cnextq;
     private javax.swing.JButton Csubmit;
     private javax.swing.JButton DisplayAnsC;
+    private javax.swing.JTextField cAns;
     private javax.swing.JTextArea cqField;
+    private javax.swing.JRadioButton cradio1q1;
+    private javax.swing.JRadioButton cradio2q1;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JScrollPane jScrollPane2;
     // End of variables declaration//GEN-END:variables
 }

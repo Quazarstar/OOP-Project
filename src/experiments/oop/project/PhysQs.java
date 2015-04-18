@@ -25,8 +25,12 @@ private int PACount;
         Pqlist = new ArrayList <>();
         Panswer = new String();
         PACount = 0;
+        hideRadioButtons();
     }
-
+private void hideRadioButtons(){
+    pradio1q1.setVisible(false);
+    pradio2q1.setVisible(false);
+    }
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -40,10 +44,11 @@ private int PACount;
         Psubmit = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         pqField = new javax.swing.JTextArea();
-        jScrollPane2 = new javax.swing.JScrollPane();
-        PAfield = new javax.swing.JTextArea();
         Pnextq = new javax.swing.JButton();
         DisplayAnsP = new javax.swing.JButton();
+        pAns = new javax.swing.JTextField();
+        pradio1q1 = new javax.swing.JRadioButton();
+        pradio2q1 = new javax.swing.JRadioButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMinimumSize(new java.awt.Dimension(455, 415));
@@ -69,11 +74,6 @@ private int PACount;
         pqField.setText("__________ is the change in \ndirection of a beam of light when \nit enters from one medium to \nanother.");
         jScrollPane1.setViewportView(pqField);
 
-        PAfield.setColumns(20);
-        PAfield.setRows(5);
-        PAfield.setText("Please enter answer here!");
-        jScrollPane2.setViewportView(PAfield);
-
         Pnextq.setText("next");
         Pnextq.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -88,28 +88,46 @@ private int PACount;
             }
         });
 
+        pAns.setText("Please enter answer here!");
+
+        pradio1q1.setText("light bends when entering from one medium to another");
+        pradio1q1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                pradio1q1ActionPerformed(evt);
+            }
+        });
+
+        pradio2q1.setText("light bounces off surfaces");
+        pradio2q1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                pradio2q1ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap(171, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(Psubmit)
-                        .addGap(193, 193, 193))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(DisplayAnsP)
-                        .addGap(80, 80, 80)
-                        .addComponent(Pnextq)
-                        .addGap(36, 36, 36))))
+                .addComponent(DisplayAnsP)
+                .addGap(80, 80, 80)
+                .addComponent(Pnextq)
+                .addGap(36, 36, 36))
             .addGroup(layout.createSequentialGroup()
-                .addComponent(Back)
-                .addGap(43, 43, 43)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 271, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 299, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(56, Short.MAX_VALUE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(195, 195, 195)
+                        .addComponent(Psubmit))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(Back)
+                        .addGap(43, 43, 43)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(pAns)
+                            .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 299, Short.MAX_VALUE)
+                            .addComponent(pradio1q1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(pradio2q1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -119,11 +137,15 @@ private int PACount;
                     .addGroup(layout.createSequentialGroup()
                         .addGap(22, 22, 22)
                         .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(42, 42, 42)
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(28, 28, 28)
+                .addGap(32, 32, 32)
+                .addComponent(pAns, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(pradio1q1)
+                .addGap(34, 34, 34)
+                .addComponent(pradio2q1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 96, Short.MAX_VALUE)
                 .addComponent(Psubmit)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 97, Short.MAX_VALUE)
+                .addGap(56, 56, 56)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(Pnextq)
                     .addComponent(DisplayAnsP))
@@ -142,22 +164,47 @@ private int PACount;
 int nextPhys =0;
     private void PnextqActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PnextqActionPerformed
         // TODO add your handling code here:
-                        nextPhys++;
+        String pQuestion[] = new String[5];
+        pQuestion[1]="Question 2: complete the sentence:"
+                + "\nWhen light hits a _____"
+                + "\n medium...";
+        pQuestion[2]="Question 3: If you dip a pencil "
+                + "\nin water you will see\n it ______. ";
+        pQuestion[3]="Question 4: what is used to show that"
+            + "\nwhite light is a spectrum of colors?";
+        pQuestion[4]="Question 5: refraction is when "
+                + "__________";
+       nextPhys++;
         int Pcount = 0;
 while(Pcount <= nextPhys){
     if(nextPhys==1){
-    Pnextq.setVisible(false);
-    pqField.setText("Question 2: what is used to show that"
-            + "\nwhite light is a spectrum of colors? ");
+    
+    pqField.setText(pQuestion[1]);
     }
+    else if(nextPhys==2){
+    pqField.setText(pQuestion[2]);
+    }
+    else  if(nextPhys==3){
+    pqField.setText(pQuestion[3]);        
+    }
+    else{
+            pAns.setVisible(false);
+    Pnextq.setVisible(false);
+    Psubmit.setVisible(false);
+    pradio1q1.setVisible(true);
+    pradio2q1.setVisible(true);
+    pqField.setText(pQuestion[4]);
+    }
+
 Pcount++;
 }
+
 Psubmit.setEnabled(true);
     }//GEN-LAST:event_PnextqActionPerformed
 
     private void PsubmitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PsubmitActionPerformed
         // TODO add your handling code here:
-          Panswer = PAfield.getText();
+          Panswer = pAns.getText();
         
         Question q = new Question();
         q.setAnswer(Panswer);
@@ -177,10 +224,11 @@ Psubmit.setEnabled(true);
         confirm[0] = "Correct!";
         confirm[1] = "incorrect";
         
-        String Correct[] = new String[2];
+        String Correct[] = new String[4];
         Correct[0]= "refraction";
-        Correct[1]= "prism";
-       
+        Correct[1]= "thicker";
+        Correct[2]= "bend";
+        Correct[3]= "prism";
         for(int i = 0; i < Pqlist.size();i++){
             if(Pqlist.get(i).getAnswer().equals(Correct[i])){
              confirmAns = 0;
@@ -191,8 +239,32 @@ Psubmit.setEnabled(true);
             number++;
             JOptionPane.showMessageDialog(null,"for question "+number+" your answer is: "+ Pqlist.get(i).getAnswer()+" It is "+confirm[confirmAns]+" The correct answer is: "+Correct[i]);
         }
-        
+            if(radioAns==1){
+        JOptionPane.showMessageDialog(null,"You chose the first answer and it is correct");
+        }
+        else if(radioAns==2){
+        JOptionPane.showMessageDialog(null,"You chose the second answer and it is incorrect");
+        }
+        else{
+        JOptionPane.showMessageDialog(null,"you havnt dont the question yet");
+        }
     }//GEN-LAST:event_DisplayAnsPActionPerformed
+int radioAns = 0;
+    private void pradio1q1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pradio1q1ActionPerformed
+        // TODO add your handling code here:
+                pradio1q1.setEnabled(false);
+        pradio2q1.setEnabled(false);
+        
+        radioAns = 1;
+    }//GEN-LAST:event_pradio1q1ActionPerformed
+
+    private void pradio2q1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pradio2q1ActionPerformed
+        // TODO add your handling code here:
+                       pradio1q1.setEnabled(false);
+        pradio2q1.setEnabled(false);
+        
+        radioAns = 2;
+    }//GEN-LAST:event_pradio2q1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -232,11 +304,12 @@ Psubmit.setEnabled(true);
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton Back;
     private javax.swing.JButton DisplayAnsP;
-    private javax.swing.JTextArea PAfield;
     private javax.swing.JButton Pnextq;
     private javax.swing.JButton Psubmit;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JTextField pAns;
     private javax.swing.JTextArea pqField;
+    private javax.swing.JRadioButton pradio1q1;
+    private javax.swing.JRadioButton pradio2q1;
     // End of variables declaration//GEN-END:variables
 }

@@ -9,7 +9,6 @@ package experiments.oop.project;
  *
  * @author x14435708
  */
-import experiments.oop.project.BioPg;
 import experiments.oop.project.Question;
 import java.util.ArrayList;
 import javax.swing.JOptionPane;
@@ -32,8 +31,8 @@ private int BACount;
         hideRadioButtons();
     }
     private void hideRadioButtons(){
-    jRadioButton1.setVisible(false);
-    jRadioButton2.setVisible(false);
+    bradio1q1.setVisible(false);
+    bradio2q1.setVisible(false);
     }
     /**
      * This method is called from within the constructor to initialize the form.
@@ -45,15 +44,14 @@ private int BACount;
     private void initComponents() {
 
         back = new javax.swing.JButton();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        BAfield = new javax.swing.JTextArea();
         Bnextq = new javax.swing.JButton();
         Bsubmit = new javax.swing.JButton();
         jScrollPane2 = new javax.swing.JScrollPane();
         bqField = new javax.swing.JTextArea();
         DisplayAnsB = new javax.swing.JButton();
-        jRadioButton1 = new javax.swing.JRadioButton();
-        jRadioButton2 = new javax.swing.JRadioButton();
+        bradio1q1 = new javax.swing.JRadioButton();
+        bradio2q1 = new javax.swing.JRadioButton();
+        bAns = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMinimumSize(new java.awt.Dimension(455, 415));
@@ -66,15 +64,7 @@ private int BACount;
             }
         });
         getContentPane().add(back);
-        back.setBounds(0, 0, 55, 23);
-
-        BAfield.setColumns(20);
-        BAfield.setRows(5);
-        BAfield.setText("Please enter answer here!");
-        jScrollPane1.setViewportView(BAfield);
-
-        getContentPane().add(jScrollPane1);
-        jScrollPane1.setBounds(90, 160, 340, 100);
+        back.setBounds(0, 0, 57, 23);
 
         Bnextq.setText("next");
         Bnextq.addActionListener(new java.awt.event.ActionListener() {
@@ -83,7 +73,7 @@ private int BACount;
             }
         });
         getContentPane().add(Bnextq);
-        Bnextq.setBounds(370, 360, 55, 23);
+        Bnextq.setBounds(370, 360, 57, 23);
 
         Bsubmit.setText("submit");
         Bsubmit.addActionListener(new java.awt.event.ActionListener() {
@@ -92,7 +82,7 @@ private int BACount;
             }
         });
         getContentPane().add(Bsubmit);
-        Bsubmit.setBounds(210, 270, 90, 23);
+        Bsubmit.setBounds(210, 290, 90, 23);
 
         bqField.setEditable(false);
         bqField.setColumns(20);
@@ -113,18 +103,27 @@ private int BACount;
         getContentPane().add(DisplayAnsB);
         DisplayAnsB.setBounds(190, 360, 130, 23);
 
-        jRadioButton1.setText("jRadioButton1");
-        jRadioButton1.addActionListener(new java.awt.event.ActionListener() {
+        bradio1q1.setText("converting light energy to chemical energy ");
+        bradio1q1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton1ActionPerformed(evt);
+                bradio1q1ActionPerformed(evt);
             }
         });
-        getContentPane().add(jRadioButton1);
-        jRadioButton1.setBounds(60, 290, 93, 23);
+        getContentPane().add(bradio1q1);
+        bradio1q1.setBounds(90, 210, 340, 23);
 
-        jRadioButton2.setText("jRadioButton2");
-        getContentPane().add(jRadioButton2);
-        jRadioButton2.setBounds(60, 340, 93, 23);
+        bradio2q1.setText("converting cemical energy to light energy");
+        bradio2q1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bradio2q1ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(bradio2q1);
+        bradio2q1.setBounds(90, 250, 340, 23);
+
+        bAns.setText("Please enter answer here!");
+        getContentPane().add(bAns);
+        bAns.setBounds(90, 170, 340, 30);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -138,33 +137,43 @@ private int BACount;
 int nextBio = 0;
     private void BnextqActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BnextqActionPerformed
         // TODO add your handling code here:
+        bAns.setText("");
+        String bQuestion[] = new String[5];
+        bQuestion[1]="Question 2:complete the sentence"
+                + "\n The molecules are moved and \n converted in the area are \n" +
+                "called the _______";
+        bQuestion[2]="Question 3:When the ATP is used "
+            + "to \n make glucose what is the cycle\n"
+            + "called the _______ cycle";
+        bQuestion[3]="Question 4:complete the sentence"
+            + "\nthe process of photosynthesis"
+            + "\n is devided into 2 parts the "
+            + "\nlight dependant reaction and "
+            + "\nthe light _____ reaction?";
+        bQuestion[4]="Question 5: select the answer"
+                + "\nPhotosynthesis is the process of ";
          nextBio++;
         int Bcount = 0;
 while(Bcount <= nextBio){
     if(nextBio==1){
         
-    bqField.setText("Question 2:complete the sentence"
-            + "\n The molecules are moved and \n converted in the area are \n" +
-"called the _______");
+    bqField.setText(bQuestion[1]);
     }
     else if(nextBio==2){
         
-    bqField.setText("Question 3:When the ATP is used "
-            + "to \n make glucose what is the cycle\n"
-            + "called the _______ cycle");
+    bqField.setText(bQuestion[2]);
     }
     else if(nextBio==3){
     
-    bqField.setText("Question 4:complete the sentence"
-            + "\nthe process of photosynthesis"
-            + "\n is devided into 2 parts the "
-            + "\nlight dependant reaction and "
-            + "\nthe light _____ reaction?");
+    bqField.setText(bQuestion[3]);
     }
     else if(nextBio==4){
-    BAfield.setVisible(false);
-    BAfield.setEnabled(false);
-    jScrollPane1.setVisible(false);
+    bAns.setVisible(false);
+    Bsubmit.setVisible(false);
+    Bnextq.setVisible(false);
+    bradio1q1.setVisible(true);
+    bradio2q1.setVisible(true);
+    bqField.setText(bQuestion[4]);
     }
 Bcount++;
 }
@@ -174,7 +183,7 @@ Bsubmit.setEnabled(true);
 
     private void BsubmitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BsubmitActionPerformed
         // get text from text field
-         Banswer = BAfield.getText();
+         Banswer = bAns.getText();
         
         Question q = new Question();
         q.setAnswer(Banswer);
@@ -188,34 +197,54 @@ Bsubmit.setEnabled(true);
 
     private void DisplayAnsBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DisplayAnsBActionPerformed
         // TODO add your handling code here:
-         int confirmAns = 0;
+            int confirmAns = 0;
         int number = 0;
         
-        String confirm[] = new String[3];
+        String confirm[] = new String[2];
         confirm[0] = "Correct!";
         confirm[1] = "incorrect";
        
-        String Correct[] = new String[2];
-        Correct[0]= "chloroplast";
-        Correct[1]= "stroma";
-        Correct[2]="calvin";
-        Correct[3]="independant";
+        String CorrectAns[] = new String[4];
+        CorrectAns[0]= "chloroplast";
+        CorrectAns[1]= "stroma";
+        CorrectAns[2]="calvin";
+        CorrectAns[3]="independent";
         for(int i = 0; i < Bqlist.size();i++){
-            if(Bqlist.get(i).getAnswer().equals(Correct[i])){
+            if(Bqlist.get(i).getAnswer().equals(CorrectAns[i])){
              confirmAns = 0;
             }
             else{
             confirmAns = 1;
             }
             number++;
-            JOptionPane.showMessageDialog(null,"for question "+number+" your answer is: "+ Bqlist.get(i).getAnswer()+" It is "+confirm[confirmAns]+" The correct answer is: "+Correct[i]);
+            JOptionPane.showMessageDialog(null,"for question "+number+" your answer is: "+ Bqlist.get(i).getAnswer()+" It is "+confirm[confirmAns]+" The correct answer is: "+CorrectAns[i]);
+        }
+        if(radioAns==1){
+        JOptionPane.showMessageDialog(null,"You chose the first answer and it is correct");
+        }
+        else if(radioAns==2){
+        JOptionPane.showMessageDialog(null,"You chose the second answer and it is incorrect");
+        }
+        else{
+        JOptionPane.showMessageDialog(null,"you havnt dont the question yet");
         }
         
     }//GEN-LAST:event_DisplayAnsBActionPerformed
-
-    private void jRadioButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton1ActionPerformed
+int radioAns = 0;
+    private void bradio1q1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bradio1q1ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton1ActionPerformed
+        bradio1q1.setEnabled(false);
+        bradio2q1.setEnabled(false);
+        
+        radioAns = 1;
+    }//GEN-LAST:event_bradio1q1ActionPerformed
+
+    private void bradio2q1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bradio2q1ActionPerformed
+        // TODO add your handling code here:
+        bradio1q1.setEnabled(false);
+        bradio2q1.setEnabled(false);
+        radioAns = 2;
+    }//GEN-LAST:event_bradio2q1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -249,15 +278,14 @@ Bsubmit.setEnabled(true);
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JTextArea BAfield;
     private javax.swing.JButton Bnextq;
     private javax.swing.JButton Bsubmit;
     private javax.swing.JButton DisplayAnsB;
+    private javax.swing.JTextField bAns;
     private javax.swing.JButton back;
     private javax.swing.JTextArea bqField;
-    private javax.swing.JRadioButton jRadioButton1;
-    private javax.swing.JRadioButton jRadioButton2;
-    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JRadioButton bradio1q1;
+    private javax.swing.JRadioButton bradio2q1;
     private javax.swing.JScrollPane jScrollPane2;
     // End of variables declaration//GEN-END:variables
 }
