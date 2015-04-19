@@ -28,11 +28,11 @@ public class Hl1 extends javax.swing.JFrame {
     private void initComponents() {
 
         homeButtonHL = new javax.swing.JButton();
-        imageol2 = new javax.swing.JButton();
-        hl1placeholder = new javax.swing.JLabel();
+        hl1imageButton = new javax.swing.JButton();
+        hlImage = new javax.swing.JLabel();
         hl1steps = new javax.swing.JButton();
         Hl1desc = new javax.swing.JLabel();
-        jScrollPane1 = new javax.swing.JScrollPane();
+        hlscroll1 = new javax.swing.JScrollPane();
         hl1text = new javax.swing.JTextArea();
         Biologyheader = new javax.swing.JLabel();
         backgroundEx1 = new javax.swing.JLabel();
@@ -50,18 +50,18 @@ public class Hl1 extends javax.swing.JFrame {
         getContentPane().add(homeButtonHL);
         homeButtonHL.setBounds(0, 0, 80, 23);
 
-        imageol2.setText("Click to see image of experiement.");
-        imageol2.addActionListener(new java.awt.event.ActionListener() {
+        hl1imageButton.setText("Click to see image of experiement.");
+        hl1imageButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                imageol2ActionPerformed(evt);
+                hl1imageButtonActionPerformed(evt);
             }
         });
-        getContentPane().add(imageol2);
-        imageol2.setBounds(110, 350, 230, 23);
+        getContentPane().add(hl1imageButton);
+        hl1imageButton.setBounds(110, 350, 230, 23);
 
-        hl1placeholder.setIcon(new javax.swing.ImageIcon(getClass().getResource("/experiments/oop/project/art4098_1.jpg"))); // NOI18N
-        getContentPane().add(hl1placeholder);
-        hl1placeholder.setBounds(130, 30, 180, 100);
+        hlImage.setIcon(new javax.swing.ImageIcon(getClass().getResource("/experiments/oop/project/art4098_1.jpg"))); // NOI18N
+        getContentPane().add(hlImage);
+        hlImage.setBounds(130, 30, 180, 100);
 
         hl1steps.setText("Steps");
         hl1steps.addActionListener(new java.awt.event.ActionListener() {
@@ -77,17 +77,17 @@ public class Hl1 extends javax.swing.JFrame {
         getContentPane().add(Hl1desc);
         Hl1desc.setBounds(10, 134, 360, 20);
 
-        jScrollPane1.setToolTipText("");
+        hlscroll1.setToolTipText("");
 
         hl1text.setColumns(20);
         hl1text.setFont(new java.awt.Font("Monospaced", 0, 14)); // NOI18N
         hl1text.setLineWrap(true);
         hl1text.setRows(5);
         hl1text.setText("Experiment to test for fat.\n\nEquipment required:\n1. Brown paper or filter paper\n2. Butter\n3. Water\n4. Warm heat source.");
-        jScrollPane1.setViewportView(hl1text);
+        hlscroll1.setViewportView(hl1text);
 
-        getContentPane().add(jScrollPane1);
-        jScrollPane1.setBounds(10, 160, 420, 210);
+        getContentPane().add(hlscroll1);
+        hlscroll1.setBounds(10, 160, 420, 210);
 
         Biologyheader.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         Biologyheader.setText("Biology experiment");
@@ -114,11 +114,11 @@ public class Hl1 extends javax.swing.JFrame {
         dispose();        // TODO add your handling code here:
     }//GEN-LAST:event_homeButtonHLActionPerformed
 
-    private void imageol2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_imageol2ActionPerformed
-        Fat myFat = new Fat();
+    private void hl1imageButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_hl1imageButtonActionPerformed
+        Hl1image myFat = new Hl1image();
         myFat.setVisible(true);
         dispose();
-    }//GEN-LAST:event_imageol2ActionPerformed
+    }//GEN-LAST:event_hl1imageButtonActionPerformed
 
     /**
      * @param args the command line arguments
@@ -160,11 +160,11 @@ public class Hl1 extends javax.swing.JFrame {
     private javax.swing.JLabel Biologyheader;
     private javax.swing.JLabel Hl1desc;
     private javax.swing.JLabel backgroundEx1;
-    private javax.swing.JLabel hl1placeholder;
+    private javax.swing.JButton hl1imageButton;
     private javax.swing.JButton hl1steps;
     private javax.swing.JTextArea hl1text;
+    private javax.swing.JLabel hlImage;
+    private javax.swing.JScrollPane hlscroll1;
     private javax.swing.JButton homeButtonHL;
-    private javax.swing.JButton imageol2;
-    private javax.swing.JScrollPane jScrollPane1;
     // End of variables declaration//GEN-END:variables
 }

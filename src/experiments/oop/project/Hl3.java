@@ -27,11 +27,11 @@ public class Hl3 extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        hl3placeholder = new javax.swing.JLabel();
-        imageol2 = new javax.swing.JButton();
+        hlImage = new javax.swing.JLabel();
+        hl3Imagebutton = new javax.swing.JButton();
         Hl3desc = new javax.swing.JLabel();
         hl3steps = new javax.swing.JButton();
-        jScrollPane1 = new javax.swing.JScrollPane();
+        hl3Scrollpane = new javax.swing.JScrollPane();
         hl3text = new javax.swing.JTextArea();
         homeButtonHL = new javax.swing.JButton();
         Physicshead = new javax.swing.JLabel();
@@ -41,18 +41,18 @@ public class Hl3 extends javax.swing.JFrame {
         setMinimumSize(new java.awt.Dimension(455, 415));
         getContentPane().setLayout(null);
 
-        hl3placeholder.setIcon(new javax.swing.ImageIcon(getClass().getResource("/experiments/oop/project/art4098_1.jpg"))); // NOI18N
-        getContentPane().add(hl3placeholder);
-        hl3placeholder.setBounds(130, 30, 180, 100);
+        hlImage.setIcon(new javax.swing.ImageIcon(getClass().getResource("/experiments/oop/project/art4098_1.jpg"))); // NOI18N
+        getContentPane().add(hlImage);
+        hlImage.setBounds(130, 30, 180, 100);
 
-        imageol2.setText("Click to see image of experiement.");
-        imageol2.addActionListener(new java.awt.event.ActionListener() {
+        hl3Imagebutton.setText("Click to see image of experiement.");
+        hl3Imagebutton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                imageol2ActionPerformed(evt);
+                hl3ImagebuttonActionPerformed(evt);
             }
         });
-        getContentPane().add(imageol2);
-        imageol2.setBounds(110, 350, 230, 23);
+        getContentPane().add(hl3Imagebutton);
+        hl3Imagebutton.setBounds(110, 350, 230, 23);
 
         Hl3desc.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         Hl3desc.setText("Description of experiment. Click here to go to steps:");
@@ -68,17 +68,17 @@ public class Hl3 extends javax.swing.JFrame {
         getContentPane().add(hl3steps);
         hl3steps.setBounds(370, 130, 60, 23);
 
-        jScrollPane1.setToolTipText("");
+        hl3Scrollpane.setToolTipText("");
 
         hl3text.setColumns(20);
         hl3text.setFont(new java.awt.Font("Monospaced", 0, 14)); // NOI18N
         hl3text.setLineWrap(true);
         hl3text.setRows(5);
         hl3text.setText("Experiment to set up a simple electric circuit; use appropriate instruments to measure current, potential difference(voltage) and resistance, and establish the relationship between them.\n\nEquipment required:\n1.Low voltage power supply\n2.Rheostat\n3.Voltmeter\n4.Milliammeter\n5.330 Ω resistor \n6.Silicon diode\n");
-        jScrollPane1.setViewportView(hl3text);
+        hl3Scrollpane.setViewportView(hl3text);
 
-        getContentPane().add(jScrollPane1);
-        jScrollPane1.setBounds(10, 160, 420, 210);
+        getContentPane().add(hl3Scrollpane);
+        hl3Scrollpane.setBounds(10, 160, 420, 210);
 
         homeButtonHL.setText("Home");
         homeButtonHL.addActionListener(new java.awt.event.ActionListener() {
@@ -114,11 +114,11 @@ public class Hl3 extends javax.swing.JFrame {
         dispose();         // TODO add your handling code here:
     }//GEN-LAST:event_homeButtonHLActionPerformed
 
-    private void imageol2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_imageol2ActionPerformed
-        circuit myCircuit = new circuit();
+    private void hl3ImagebuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_hl3ImagebuttonActionPerformed
+        Hl3image myCircuit = new Hl3image();
         myCircuit.setVisible(true);
         dispose();
-    }//GEN-LAST:event_imageol2ActionPerformed
+    }//GEN-LAST:event_hl3ImagebuttonActionPerformed
 
     /**
      * @param args the command line arguments
@@ -159,11 +159,11 @@ public class Hl3 extends javax.swing.JFrame {
     private javax.swing.JLabel Hl3desc;
     private javax.swing.JLabel Physicshead;
     private javax.swing.JLabel backgroundEx3;
-    private javax.swing.JLabel hl3placeholder;
+    private javax.swing.JButton hl3Imagebutton;
+    private javax.swing.JScrollPane hl3Scrollpane;
     private javax.swing.JButton hl3steps;
     private javax.swing.JTextArea hl3text;
+    private javax.swing.JLabel hlImage;
     private javax.swing.JButton homeButtonHL;
-    private javax.swing.JButton imageol2;
-    private javax.swing.JScrollPane jScrollPane1;
     // End of variables declaration//GEN-END:variables
 }

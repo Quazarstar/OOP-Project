@@ -9,12 +9,12 @@ package experiments.oop.project;
  *
  * @author Alex
  */
-public class Fat extends javax.swing.JFrame {
+public class Hl3image extends javax.swing.JFrame {
 
     /**
-     * Creates new form Fat
+     * Creates new form circuit
      */
-    public Fat() {
+    public Hl3image() {
         initComponents();
     }
 
@@ -27,34 +27,34 @@ public class Fat extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        backEx1 = new javax.swing.JButton();
+        backEx3step = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setMinimumSize(new java.awt.Dimension(258, 158));
+        setMinimumSize(new java.awt.Dimension(369, 277));
         getContentPane().setLayout(null);
 
-        backEx1.setText("Return");
-        backEx1.addActionListener(new java.awt.event.ActionListener() {
+        backEx3step.setText("Back");
+        backEx3step.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                backEx1ActionPerformed(evt);
+                backEx3stepActionPerformed(evt);
             }
         });
-        getContentPane().add(backEx1);
-        backEx1.setBounds(160, 10, 80, 23);
+        getContentPane().add(backEx3step);
+        backEx3step.setBounds(0, 0, 80, 23);
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/experiments/oop/project/Testing for fat.gif"))); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/experiments/oop/project/cicruit.jpg"))); // NOI18N
         getContentPane().add(jLabel1);
-        jLabel1.setBounds(0, 0, 241, 118);
+        jLabel1.setBounds(0, 0, 353, 257);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void backEx1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backEx1ActionPerformed
-        Hl1 myHl1 = new Hl1();
-        myHl1.setVisible(true);
+    private void backEx3stepActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backEx3stepActionPerformed
+        Hl3 myHl3 = new Hl3();
+        myHl3.setVisible(true);
         dispose();// TODO add your handling code here:
-    }//GEN-LAST:event_backEx1ActionPerformed
+    }//GEN-LAST:event_backEx3stepActionPerformed
 
     /**
      * @param args the command line arguments
@@ -73,26 +73,27 @@ public class Fat extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Fat.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Hl3image.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Fat.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Hl3image.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Fat.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Hl3image.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Fat.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Hl3image.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Fat().setVisible(true);
+                new Hl3image().setVisible(true);
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton backEx1;
+    private javax.swing.JButton backEx3step;
     private javax.swing.JLabel jLabel1;
     // End of variables declaration//GEN-END:variables
 }

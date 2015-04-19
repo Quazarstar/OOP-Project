@@ -28,9 +28,9 @@ public class Hl2steps extends javax.swing.JFrame {
     private void initComponents() {
 
         backEx1 = new javax.swing.JButton();
-        hl2placeholder = new javax.swing.JLabel();
+        hlImage = new javax.swing.JLabel();
         Hl2steps = new javax.swing.JLabel();
-        jScrollPane1 = new javax.swing.JScrollPane();
+        Hl2scrollsteps = new javax.swing.JScrollPane();
         stepsarea2 = new javax.swing.JTextArea();
         homeButtonHL = new javax.swing.JButton();
         Chemistrystepshead = new javax.swing.JLabel();
@@ -49,9 +49,9 @@ public class Hl2steps extends javax.swing.JFrame {
         getContentPane().add(backEx1);
         backEx1.setBounds(0, 0, 80, 23);
 
-        hl2placeholder.setIcon(new javax.swing.ImageIcon(getClass().getResource("/experiments/oop/project/art4098_1.jpg"))); // NOI18N
-        getContentPane().add(hl2placeholder);
-        hl2placeholder.setBounds(130, 30, 180, 100);
+        hlImage.setIcon(new javax.swing.ImageIcon(getClass().getResource("/experiments/oop/project/art4098_1.jpg"))); // NOI18N
+        getContentPane().add(hlImage);
+        hlImage.setBounds(130, 30, 180, 100);
 
         Hl2steps.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         Hl2steps.setText("Outline of steps required to conduct experiment. ");
@@ -62,10 +62,10 @@ public class Hl2steps extends javax.swing.JFrame {
         stepsarea2.setLineWrap(true);
         stepsarea2.setRows(5);
         stepsarea2.setText("1. Set up the equipment like in the image provided.\n2.Carefully pour the solution into the conical flask – the water will flow through,leaving just the soil behind. \nNote: that the disadvantage with this method is that you don’t get to keep the liquid, only the solid.");
-        jScrollPane1.setViewportView(stepsarea2);
+        Hl2scrollsteps.setViewportView(stepsarea2);
 
-        getContentPane().add(jScrollPane1);
-        jScrollPane1.setBounds(0, 160, 440, 220);
+        getContentPane().add(Hl2scrollsteps);
+        Hl2scrollsteps.setBounds(0, 160, 440, 220);
 
         homeButtonHL.setText("Home");
         homeButtonHL.addActionListener(new java.awt.event.ActionListener() {
@@ -138,12 +138,12 @@ public class Hl2steps extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel Chemistrystepshead;
+    private javax.swing.JScrollPane Hl2scrollsteps;
     private javax.swing.JLabel Hl2steps;
     private javax.swing.JButton backEx1;
     private javax.swing.JLabel hl1stepsbg;
-    private javax.swing.JLabel hl2placeholder;
+    private javax.swing.JLabel hlImage;
     private javax.swing.JButton homeButtonHL;
-    private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextArea stepsarea2;
     // End of variables declaration//GEN-END:variables
 }

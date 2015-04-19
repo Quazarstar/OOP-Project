@@ -27,12 +27,12 @@ public class Ol2 extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        placeholderol2 = new javax.swing.JLabel();
+        olImage = new javax.swing.JLabel();
         homeButtonOL2 = new javax.swing.JButton();
-        imageol2 = new javax.swing.JButton();
+        olImageButton = new javax.swing.JButton();
         stepsOl2 = new javax.swing.JButton();
         descOl2 = new javax.swing.JLabel();
-        jScrollPane1 = new javax.swing.JScrollPane();
+        ol2ScrollPane = new javax.swing.JScrollPane();
         textOl2 = new javax.swing.JTextArea();
         Chemistryheader = new javax.swing.JLabel();
         backgroundOl2 = new javax.swing.JLabel();
@@ -41,9 +41,9 @@ public class Ol2 extends javax.swing.JFrame {
         setMinimumSize(new java.awt.Dimension(455, 415));
         getContentPane().setLayout(null);
 
-        placeholderol2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/experiments/oop/project/quimica.jpg"))); // NOI18N
-        getContentPane().add(placeholderol2);
-        placeholderol2.setBounds(130, 30, 180, 100);
+        olImage.setIcon(new javax.swing.ImageIcon(getClass().getResource("/experiments/oop/project/quimica.jpg"))); // NOI18N
+        getContentPane().add(olImage);
+        olImage.setBounds(130, 30, 180, 100);
 
         homeButtonOL2.setText("Home");
         homeButtonOL2.addActionListener(new java.awt.event.ActionListener() {
@@ -54,14 +54,14 @@ public class Ol2 extends javax.swing.JFrame {
         getContentPane().add(homeButtonOL2);
         homeButtonOL2.setBounds(0, 0, 80, 23);
 
-        imageol2.setText("Click to see image of experiement.");
-        imageol2.addActionListener(new java.awt.event.ActionListener() {
+        olImageButton.setText("Click to see image of experiement.");
+        olImageButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                imageol2ActionPerformed(evt);
+                olImageButtonActionPerformed(evt);
             }
         });
-        getContentPane().add(imageol2);
-        imageol2.setBounds(110, 350, 230, 23);
+        getContentPane().add(olImageButton);
+        olImageButton.setBounds(110, 350, 230, 23);
 
         stepsOl2.setText("Steps");
         stepsOl2.addActionListener(new java.awt.event.ActionListener() {
@@ -77,17 +77,17 @@ public class Ol2 extends javax.swing.JFrame {
         getContentPane().add(descOl2);
         descOl2.setBounds(10, 134, 360, 20);
 
-        jScrollPane1.setToolTipText("");
+        ol2ScrollPane.setToolTipText("");
 
         textOl2.setColumns(20);
         textOl2.setFont(new java.awt.Font("Monospaced", 0, 14)); // NOI18N
         textOl2.setLineWrap(true);
         textOl2.setRows(5);
         textOl2.setText("Investigate the pH of a variety of materials using the pH scale.\n\nEquipment required:\n1. Test tube rack. \n2. Lemon juice or fizzy drinks for acids.\n3. Bread soda or toothpaste for bases.\n4. Four test tubes\n5. Water");
-        jScrollPane1.setViewportView(textOl2);
+        ol2ScrollPane.setViewportView(textOl2);
 
-        getContentPane().add(jScrollPane1);
-        jScrollPane1.setBounds(10, 160, 420, 210);
+        getContentPane().add(ol2ScrollPane);
+        ol2ScrollPane.setBounds(10, 160, 420, 210);
 
         Chemistryheader.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         Chemistryheader.setText("Chemestry experiment");
@@ -114,12 +114,12 @@ public class Ol2 extends javax.swing.JFrame {
         dispose();
     }//GEN-LAST:event_stepsOl2ActionPerformed
 
-    private void imageol2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_imageol2ActionPerformed
+    private void olImageButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_olImageButtonActionPerformed
         PH myPH = new PH();
         myPH.setVisible(true);
         dispose();
 
-    }//GEN-LAST:event_imageol2ActionPerformed
+    }//GEN-LAST:event_olImageButtonActionPerformed
 
     /**
      * @param args the command line arguments
@@ -161,9 +161,9 @@ public class Ol2 extends javax.swing.JFrame {
     private javax.swing.JLabel backgroundOl2;
     private javax.swing.JLabel descOl2;
     private javax.swing.JButton homeButtonOL2;
-    private javax.swing.JButton imageol2;
-    private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JLabel placeholderol2;
+    private javax.swing.JScrollPane ol2ScrollPane;
+    private javax.swing.JLabel olImage;
+    private javax.swing.JButton olImageButton;
     private javax.swing.JButton stepsOl2;
     private javax.swing.JTextArea textOl2;
     // End of variables declaration//GEN-END:variables

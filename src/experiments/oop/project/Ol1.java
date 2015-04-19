@@ -27,10 +27,10 @@ public class Ol1 extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        placeholderol1 = new javax.swing.JLabel();
+        olImage = new javax.swing.JLabel();
         homeButtonOL1 = new javax.swing.JButton();
-        imageol1 = new javax.swing.JButton();
-        jScrollPane1 = new javax.swing.JScrollPane();
+        olImageButton = new javax.swing.JButton();
+        Ol1ScrollPane = new javax.swing.JScrollPane();
         textOl1 = new javax.swing.JTextArea();
         stepsOl1 = new javax.swing.JButton();
         descOl1 = new javax.swing.JLabel();
@@ -41,9 +41,9 @@ public class Ol1 extends javax.swing.JFrame {
         setMinimumSize(new java.awt.Dimension(455, 415));
         getContentPane().setLayout(null);
 
-        placeholderol1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/experiments/oop/project/art4098_1.jpg"))); // NOI18N
-        getContentPane().add(placeholderol1);
-        placeholderol1.setBounds(130, 30, 180, 100);
+        olImage.setIcon(new javax.swing.ImageIcon(getClass().getResource("/experiments/oop/project/art4098_1.jpg"))); // NOI18N
+        getContentPane().add(olImage);
+        olImage.setBounds(130, 30, 180, 100);
 
         homeButtonOL1.setText("Home");
         homeButtonOL1.addActionListener(new java.awt.event.ActionListener() {
@@ -54,26 +54,26 @@ public class Ol1 extends javax.swing.JFrame {
         getContentPane().add(homeButtonOL1);
         homeButtonOL1.setBounds(0, 0, 80, 23);
 
-        imageol1.setText("Click to see image of experiement.");
-        imageol1.addActionListener(new java.awt.event.ActionListener() {
+        olImageButton.setText("Click to see image of experiement.");
+        olImageButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                imageol1ActionPerformed(evt);
+                olImageButtonActionPerformed(evt);
             }
         });
-        getContentPane().add(imageol1);
-        imageol1.setBounds(110, 350, 230, 23);
+        getContentPane().add(olImageButton);
+        olImageButton.setBounds(110, 350, 230, 23);
 
-        jScrollPane1.setToolTipText("");
+        Ol1ScrollPane.setToolTipText("");
 
         textOl1.setColumns(20);
         textOl1.setFont(new java.awt.Font("Monospaced", 0, 14)); // NOI18N
         textOl1.setLineWrap(true);
         textOl1.setRows(5);
         textOl1.setText("Investigate the action of amylase on starch; identify the substrate, product and enzyme. \nEquipment required: \n1. Four beakers. \n2. A dripper and test solution. \n3. Starch solution.\n4. Salivary amylase.\n5. Water.\n6. Water bath.");
-        jScrollPane1.setViewportView(textOl1);
+        Ol1ScrollPane.setViewportView(textOl1);
 
-        getContentPane().add(jScrollPane1);
-        jScrollPane1.setBounds(10, 160, 420, 210);
+        getContentPane().add(Ol1ScrollPane);
+        Ol1ScrollPane.setBounds(10, 160, 420, 210);
 
         stepsOl1.setText("Steps");
         stepsOl1.addActionListener(new java.awt.event.ActionListener() {
@@ -114,11 +114,11 @@ public class Ol1 extends javax.swing.JFrame {
         dispose();         // TODO add your handling code here:
     }//GEN-LAST:event_homeButtonOL1ActionPerformed
 
-    private void imageol1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_imageol1ActionPerformed
+    private void olImageButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_olImageButtonActionPerformed
         amylase myAmylase = new amylase();
         myAmylase.setVisible(true);
         dispose();
-    }//GEN-LAST:event_imageol1ActionPerformed
+    }//GEN-LAST:event_olImageButtonActionPerformed
 
     /**
      * @param args the command line arguments
@@ -157,12 +157,12 @@ public class Ol1 extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel Biologyheader;
+    private javax.swing.JScrollPane Ol1ScrollPane;
     private javax.swing.JLabel backgroundOl1;
     private javax.swing.JLabel descOl1;
     private javax.swing.JButton homeButtonOL1;
-    private javax.swing.JButton imageol1;
-    private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JLabel placeholderol1;
+    private javax.swing.JLabel olImage;
+    private javax.swing.JButton olImageButton;
     private javax.swing.JButton stepsOl1;
     private javax.swing.JTextArea textOl1;
     // End of variables declaration//GEN-END:variables

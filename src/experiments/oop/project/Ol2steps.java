@@ -27,10 +27,10 @@ public class Ol2steps extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        placeholderol2 = new javax.swing.JLabel();
+        olImage = new javax.swing.JLabel();
         backOlstep2 = new javax.swing.JButton();
         homeButtonOl2 = new javax.swing.JButton();
-        jScrollPane1 = new javax.swing.JScrollPane();
+        ol2ScrollSteps = new javax.swing.JScrollPane();
         stepsareaol2 = new javax.swing.JTextArea();
         StepsdescOl2 = new javax.swing.JLabel();
         Chemistrystepshead = new javax.swing.JLabel();
@@ -40,9 +40,9 @@ public class Ol2steps extends javax.swing.JFrame {
         setMinimumSize(new java.awt.Dimension(455, 415));
         getContentPane().setLayout(null);
 
-        placeholderol2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/experiments/oop/project/quimica.jpg"))); // NOI18N
-        getContentPane().add(placeholderol2);
-        placeholderol2.setBounds(130, 30, 180, 100);
+        olImage.setIcon(new javax.swing.ImageIcon(getClass().getResource("/experiments/oop/project/quimica.jpg"))); // NOI18N
+        getContentPane().add(olImage);
+        olImage.setBounds(130, 30, 180, 100);
 
         backOlstep2.setText("Back");
         backOlstep2.addActionListener(new java.awt.event.ActionListener() {
@@ -66,10 +66,10 @@ public class Ol2steps extends javax.swing.JFrame {
         stepsareaol2.setLineWrap(true);
         stepsareaol2.setRows(5);
         stepsareaol2.setText("1.Put substances in test tubes (they must be dissolved in water if they arenot a liquid).\n2.Pour in a few drops of universal indicator and shake well (the colour will change according to how acidic or basic the substance is).\n3.Use the pH scale to write up results.\nResults: The water or substance should turn different colors based on the PH Scale. More towards red pigments for acids and more towards purple blue for base.");
-        jScrollPane1.setViewportView(stepsareaol2);
+        ol2ScrollSteps.setViewportView(stepsareaol2);
 
-        getContentPane().add(jScrollPane1);
-        jScrollPane1.setBounds(0, 160, 440, 220);
+        getContentPane().add(ol2ScrollSteps);
+        ol2ScrollSteps.setBounds(0, 160, 440, 220);
 
         StepsdescOl2.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         StepsdescOl2.setText("Outline of steps required to conduct experiment. ");
@@ -142,8 +142,8 @@ public class Ol2steps extends javax.swing.JFrame {
     private javax.swing.JLabel StepsdescOl2;
     private javax.swing.JButton backOlstep2;
     private javax.swing.JButton homeButtonOl2;
-    private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JLabel placeholderol2;
+    private javax.swing.JScrollPane ol2ScrollSteps;
+    private javax.swing.JLabel olImage;
     private javax.swing.JTextArea stepsareaol2;
     // End of variables declaration//GEN-END:variables
 }

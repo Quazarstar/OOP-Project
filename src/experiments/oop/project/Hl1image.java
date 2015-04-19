@@ -9,12 +9,12 @@ package experiments.oop.project;
  *
  * @author Alex
  */
-public class Filtration extends javax.swing.JFrame {
+public class Hl1image extends javax.swing.JFrame {
 
     /**
-     * Creates new form Filtration
+     * Creates new form Fat
      */
-    public Filtration() {
+    public Hl1image() {
         initComponents();
     }
 
@@ -31,7 +31,7 @@ public class Filtration extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setMinimumSize(new java.awt.Dimension(337, 229));
+        setMinimumSize(new java.awt.Dimension(258, 158));
         getContentPane().setLayout(null);
 
         backEx1.setText("Return");
@@ -41,18 +41,18 @@ public class Filtration extends javax.swing.JFrame {
             }
         });
         getContentPane().add(backEx1);
-        backEx1.setBounds(220, 100, 80, 23);
+        backEx1.setBounds(160, 10, 80, 23);
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/experiments/oop/project/5-2372d456b9.jpg"))); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/experiments/oop/project/Testing for fat.gif"))); // NOI18N
         getContentPane().add(jLabel1);
-        jLabel1.setBounds(0, 0, 321, 196);
+        jLabel1.setBounds(0, 0, 241, 118);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void backEx1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backEx1ActionPerformed
-        Hl2 myHl2 = new Hl2();
-        myHl2.setVisible(true);
+        Hl1 myHl1 = new Hl1();
+        myHl1.setVisible(true);
         dispose();// TODO add your handling code here:
     }//GEN-LAST:event_backEx1ActionPerformed
 
@@ -73,20 +73,21 @@ public class Filtration extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Filtration.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Hl1image.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Filtration.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Hl1image.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Filtration.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Hl1image.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Filtration.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Hl1image.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Filtration().setVisible(true);
+                new Hl1image().setVisible(true);
             }
         });
     }

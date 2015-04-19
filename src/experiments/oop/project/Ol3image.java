@@ -9,12 +9,12 @@ package experiments.oop.project;
  *
  * @author Alex
  */
-public class Spring extends javax.swing.JFrame {
+public class Ol3image extends javax.swing.JFrame {
 
     /**
      * Creates new form Spring
      */
-    public Spring() {
+    public Ol3image() {
         initComponents();
     }
 
@@ -43,7 +43,7 @@ public class Spring extends javax.swing.JFrame {
             }
         });
         getContentPane().add(backOlstep3);
-        backOlstep3.setBounds(0, 190, 80, 29);
+        backOlstep3.setBounds(0, 190, 80, 23);
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/experiments/oop/project/Spring.jpg"))); // NOI18N
         getContentPane().add(jLabel1);
@@ -79,20 +79,21 @@ public class Spring extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Spring.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Ol3image.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Spring.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Ol3image.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Spring.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Ol3image.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Spring.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Ol3image.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Spring().setVisible(true);
+                new Ol3image().setVisible(true);
             }
         });
     }

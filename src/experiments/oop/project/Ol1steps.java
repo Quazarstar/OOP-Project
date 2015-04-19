@@ -30,7 +30,7 @@ public class Ol1steps extends javax.swing.JFrame {
         backOlstep1 = new javax.swing.JButton();
         homeButtonOl = new javax.swing.JButton();
         StepsdescOl1 = new javax.swing.JLabel();
-        jScrollPane1 = new javax.swing.JScrollPane();
+        ol1ScrollSteps = new javax.swing.JScrollPane();
         stepsareaol1 = new javax.swing.JTextArea();
         placeholderol1 = new javax.swing.JLabel();
         Biologysteps1header = new javax.swing.JLabel();
@@ -67,10 +67,10 @@ public class Ol1steps extends javax.swing.JFrame {
         stepsareaol1.setLineWrap(true);
         stepsareaol1.setRows(5);
         stepsareaol1.setText("1.Add some saliva (which contains the amylase enzyme) to a starch solution which is in a test tube.\n2.Confirm beforehand that the substrate is starch by adding iodine to it – it should turn blue/black.\n3.Heat in a water bath at 37 degrees C for 10 minutes.\n4.The starch should now be converted to a simple sugar product called maltose so we need to test for this.Add some Benedict’s solution and place in boiling water for a few minutes.\nResult: The contents of the test-tube should turn red, indicating that sugar is present.");
-        jScrollPane1.setViewportView(stepsareaol1);
+        ol1ScrollSteps.setViewportView(stepsareaol1);
 
-        getContentPane().add(jScrollPane1);
-        jScrollPane1.setBounds(0, 160, 440, 220);
+        getContentPane().add(ol1ScrollSteps);
+        ol1ScrollSteps.setBounds(0, 160, 440, 220);
 
         placeholderol1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/experiments/oop/project/quimica.jpg"))); // NOI18N
         getContentPane().add(placeholderol1);
@@ -142,7 +142,7 @@ public class Ol1steps extends javax.swing.JFrame {
     private javax.swing.JLabel StepsdescOl1;
     private javax.swing.JButton backOlstep1;
     private javax.swing.JButton homeButtonOl;
-    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane ol1ScrollSteps;
     private javax.swing.JLabel placeholderol1;
     private javax.swing.JTextArea stepsareaol1;
     // End of variables declaration//GEN-END:variables

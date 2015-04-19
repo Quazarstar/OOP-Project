@@ -27,10 +27,10 @@ public class Ol3steps extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        placeholderol3 = new javax.swing.JLabel();
+        olImage = new javax.swing.JLabel();
         backOlstep3 = new javax.swing.JButton();
         homeButtonOl3 = new javax.swing.JButton();
-        jScrollPane1 = new javax.swing.JScrollPane();
+        olScrollSteps = new javax.swing.JScrollPane();
         stepsareaol3 = new javax.swing.JTextArea();
         StepsdescOl13 = new javax.swing.JLabel();
         Physicstepshead = new javax.swing.JLabel();
@@ -40,9 +40,9 @@ public class Ol3steps extends javax.swing.JFrame {
         setMinimumSize(new java.awt.Dimension(455, 415));
         getContentPane().setLayout(null);
 
-        placeholderol3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/experiments/oop/project/quimica.jpg"))); // NOI18N
-        getContentPane().add(placeholderol3);
-        placeholderol3.setBounds(130, 30, 180, 100);
+        olImage.setIcon(new javax.swing.ImageIcon(getClass().getResource("/experiments/oop/project/quimica.jpg"))); // NOI18N
+        getContentPane().add(olImage);
+        olImage.setBounds(130, 30, 180, 100);
 
         backOlstep3.setText("Back");
         backOlstep3.addActionListener(new java.awt.event.ActionListener() {
@@ -66,10 +66,10 @@ public class Ol3steps extends javax.swing.JFrame {
         stepsareaol3.setLineWrap(true);
         stepsareaol3.setRows(5);
         stepsareaol3.setText("1.Use a newton-meter to stretch a spring (or hang weights from the spring as shown).\n2.Note the extension and the force used and record the results in a table.\n3.Repeat for lot of different forces.\n4.Plot a graph of force used against extension.\nResult: You should get the graph on a straight line");
-        jScrollPane1.setViewportView(stepsareaol3);
+        olScrollSteps.setViewportView(stepsareaol3);
 
-        getContentPane().add(jScrollPane1);
-        jScrollPane1.setBounds(0, 160, 440, 220);
+        getContentPane().add(olScrollSteps);
+        olScrollSteps.setBounds(0, 160, 440, 220);
 
         StepsdescOl13.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         StepsdescOl13.setText("Outline of steps required to conduct experiment. ");
@@ -142,8 +142,8 @@ public class Ol3steps extends javax.swing.JFrame {
     private javax.swing.JLabel StepsdescOl13;
     private javax.swing.JButton backOlstep3;
     private javax.swing.JButton homeButtonOl3;
-    private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JLabel placeholderol3;
+    private javax.swing.JLabel olImage;
+    private javax.swing.JScrollPane olScrollSteps;
     private javax.swing.JTextArea stepsareaol3;
     // End of variables declaration//GEN-END:variables
 }

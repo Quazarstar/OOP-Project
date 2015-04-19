@@ -27,9 +27,9 @@ public class Hl2 extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        imageol2 = new javax.swing.JButton();
-        hl2placeholder = new javax.swing.JLabel();
-        jScrollPane1 = new javax.swing.JScrollPane();
+        hlImagebutton = new javax.swing.JButton();
+        hlImage = new javax.swing.JLabel();
+        hl2Scroll = new javax.swing.JScrollPane();
         hl2text = new javax.swing.JTextArea();
         hl2steps = new javax.swing.JButton();
         Hl2desc = new javax.swing.JLabel();
@@ -41,30 +41,30 @@ public class Hl2 extends javax.swing.JFrame {
         setMinimumSize(new java.awt.Dimension(455, 415));
         getContentPane().setLayout(null);
 
-        imageol2.setText("Click to see image of experiement.");
-        imageol2.addActionListener(new java.awt.event.ActionListener() {
+        hlImagebutton.setText("Click to see image of experiement.");
+        hlImagebutton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                imageol2ActionPerformed(evt);
+                hlImagebuttonActionPerformed(evt);
             }
         });
-        getContentPane().add(imageol2);
-        imageol2.setBounds(110, 350, 230, 23);
+        getContentPane().add(hlImagebutton);
+        hlImagebutton.setBounds(110, 350, 230, 23);
 
-        hl2placeholder.setIcon(new javax.swing.ImageIcon(getClass().getResource("/experiments/oop/project/art4098_1.jpg"))); // NOI18N
-        getContentPane().add(hl2placeholder);
-        hl2placeholder.setBounds(130, 30, 180, 100);
+        hlImage.setIcon(new javax.swing.ImageIcon(getClass().getResource("/experiments/oop/project/art4098_1.jpg"))); // NOI18N
+        getContentPane().add(hlImage);
+        hlImage.setBounds(130, 30, 180, 100);
 
-        jScrollPane1.setToolTipText("");
+        hl2Scroll.setToolTipText("");
 
         hl2text.setColumns(20);
         hl2text.setFont(new java.awt.Font("Monospaced", 0, 14)); // NOI18N
         hl2text.setLineWrap(true);
         hl2text.setRows(5);
         hl2text.setText("Experiment to separate mixtures using filtration.\n\nEquipment required.\n1. Beaker\n2. A funnel\n3. Filter paper\n4. A stand\n5. Any mixture of a solid and liquid. \n");
-        jScrollPane1.setViewportView(hl2text);
+        hl2Scroll.setViewportView(hl2text);
 
-        getContentPane().add(jScrollPane1);
-        jScrollPane1.setBounds(10, 160, 420, 210);
+        getContentPane().add(hl2Scroll);
+        hl2Scroll.setBounds(10, 160, 420, 210);
 
         hl2steps.setText("Steps");
         hl2steps.addActionListener(new java.awt.event.ActionListener() {
@@ -114,11 +114,11 @@ public class Hl2 extends javax.swing.JFrame {
         dispose();         // TODO add your handling code here:
     }//GEN-LAST:event_homeButtonHLActionPerformed
 
-    private void imageol2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_imageol2ActionPerformed
-        Filtration myFiltration = new Filtration();
+    private void hlImagebuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_hlImagebuttonActionPerformed
+        Hl2image myFiltration = new Hl2image();
         myFiltration.setVisible(true);
         dispose();
-    }//GEN-LAST:event_imageol2ActionPerformed
+    }//GEN-LAST:event_hlImagebuttonActionPerformed
 
     /**
      * @param args the command line arguments
@@ -159,11 +159,11 @@ public class Hl2 extends javax.swing.JFrame {
     private javax.swing.JLabel Chemistryheader;
     private javax.swing.JLabel Hl2desc;
     private javax.swing.JLabel backgroundEx2;
-    private javax.swing.JLabel hl2placeholder;
+    private javax.swing.JScrollPane hl2Scroll;
     private javax.swing.JButton hl2steps;
     private javax.swing.JTextArea hl2text;
+    private javax.swing.JLabel hlImage;
+    private javax.swing.JButton hlImagebutton;
     private javax.swing.JButton homeButtonHL;
-    private javax.swing.JButton imageol2;
-    private javax.swing.JScrollPane jScrollPane1;
     // End of variables declaration//GEN-END:variables
 }

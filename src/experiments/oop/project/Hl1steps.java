@@ -27,22 +27,22 @@ public class Hl1steps extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        hl1placeholder = new javax.swing.JLabel();
+        hlImage = new javax.swing.JLabel();
         backEx1 = new javax.swing.JButton();
-        jScrollPane1 = new javax.swing.JScrollPane();
+        h1scrollsteps = new javax.swing.JScrollPane();
         stepsarea1 = new javax.swing.JTextArea();
-        Hl1desc = new javax.swing.JLabel();
+        hl1desc = new javax.swing.JLabel();
         homeButtonHL = new javax.swing.JButton();
-        Biologysteps1header = new javax.swing.JLabel();
+        biologySteps1Header = new javax.swing.JLabel();
         hl1stepsbg = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMinimumSize(new java.awt.Dimension(455, 415));
         getContentPane().setLayout(null);
 
-        hl1placeholder.setIcon(new javax.swing.ImageIcon(getClass().getResource("/experiments/oop/project/art4098_1.jpg"))); // NOI18N
-        getContentPane().add(hl1placeholder);
-        hl1placeholder.setBounds(130, 30, 180, 100);
+        hlImage.setIcon(new javax.swing.ImageIcon(getClass().getResource("/experiments/oop/project/art4098_1.jpg"))); // NOI18N
+        getContentPane().add(hlImage);
+        hlImage.setBounds(130, 30, 180, 100);
 
         backEx1.setText("Back");
         backEx1.addActionListener(new java.awt.event.ActionListener() {
@@ -57,15 +57,15 @@ public class Hl1steps extends javax.swing.JFrame {
         stepsarea1.setLineWrap(true);
         stepsarea1.setRows(5);
         stepsarea1.setText("1. Label a piece of brown paper (or filter paper) as fat.\n2. Place a small piece of butter or cooking oil on the paper\n3. Rub the paper after folding it over.\n4. Repeat this process using a few drops of water on another piece of paper labelled \"water\". (This acts as a control.)\n5. Leave the two pieces of paper over a radiator or heat source to dry.\n6. The butter or fat will produce a permanent stain on the paper, where as the water will not.");
-        jScrollPane1.setViewportView(stepsarea1);
+        h1scrollsteps.setViewportView(stepsarea1);
 
-        getContentPane().add(jScrollPane1);
-        jScrollPane1.setBounds(0, 160, 440, 220);
+        getContentPane().add(h1scrollsteps);
+        h1scrollsteps.setBounds(0, 160, 440, 220);
 
-        Hl1desc.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        Hl1desc.setText("Outline of steps required to conduct experiment. ");
-        getContentPane().add(Hl1desc);
-        Hl1desc.setBounds(40, 130, 360, 20);
+        hl1desc.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        hl1desc.setText("Outline of steps required to conduct experiment. ");
+        getContentPane().add(hl1desc);
+        hl1desc.setBounds(40, 130, 360, 20);
 
         homeButtonHL.setText("Home");
         homeButtonHL.addActionListener(new java.awt.event.ActionListener() {
@@ -76,10 +76,10 @@ public class Hl1steps extends javax.swing.JFrame {
         getContentPane().add(homeButtonHL);
         homeButtonHL.setBounds(0, 20, 80, 23);
 
-        Biologysteps1header.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        Biologysteps1header.setText("Biology experiment steps.");
-        getContentPane().add(Biologysteps1header);
-        Biologysteps1header.setBounds(130, 0, 320, 30);
+        biologySteps1Header.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        biologySteps1Header.setText("Biology experiment steps.");
+        getContentPane().add(biologySteps1Header);
+        biologySteps1Header.setBounds(130, 0, 320, 30);
 
         hl1stepsbg.setIcon(new javax.swing.ImageIcon(getClass().getResource("/experiments/oop/project/6805727-plain-backgrounds.jpg"))); // NOI18N
         hl1stepsbg.setText("jLabel1");
@@ -137,13 +137,13 @@ public class Hl1steps extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel Biologysteps1header;
-    private javax.swing.JLabel Hl1desc;
     private javax.swing.JButton backEx1;
-    private javax.swing.JLabel hl1placeholder;
+    private javax.swing.JLabel biologySteps1Header;
+    private javax.swing.JScrollPane h1scrollsteps;
+    private javax.swing.JLabel hl1desc;
     private javax.swing.JLabel hl1stepsbg;
+    private javax.swing.JLabel hlImage;
     private javax.swing.JButton homeButtonHL;
-    private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextArea stepsarea1;
     // End of variables declaration//GEN-END:variables
 }

@@ -27,9 +27,9 @@ public class Hl3steps extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        hl3placeholder = new javax.swing.JLabel();
+        hlImage = new javax.swing.JLabel();
         backEx3step = new javax.swing.JButton();
-        jScrollPane1 = new javax.swing.JScrollPane();
+        hl3ScrollSteps = new javax.swing.JScrollPane();
         stepsarea3 = new javax.swing.JTextArea();
         Hl3steps = new javax.swing.JLabel();
         homeButtonHL = new javax.swing.JButton();
@@ -40,9 +40,9 @@ public class Hl3steps extends javax.swing.JFrame {
         setMinimumSize(new java.awt.Dimension(455, 415));
         getContentPane().setLayout(null);
 
-        hl3placeholder.setIcon(new javax.swing.ImageIcon(getClass().getResource("/experiments/oop/project/art4098_1.jpg"))); // NOI18N
-        getContentPane().add(hl3placeholder);
-        hl3placeholder.setBounds(130, 30, 180, 100);
+        hlImage.setIcon(new javax.swing.ImageIcon(getClass().getResource("/experiments/oop/project/art4098_1.jpg"))); // NOI18N
+        getContentPane().add(hlImage);
+        hlImage.setBounds(130, 30, 180, 100);
 
         backEx3step.setText("Back");
         backEx3step.addActionListener(new java.awt.event.ActionListener() {
@@ -57,10 +57,10 @@ public class Hl3steps extends javax.swing.JFrame {
         stepsarea3.setLineWrap(true);
         stepsarea3.setRows(5);
         stepsarea3.setText("1.Set up the circuit as shown.\n2.\n Note the current (I) and potential difference (V).3.Adjust the variable resistor (rheostat) to get a new set of values.4.Repeat about 6 times and then plot a graph of potentialdifference against current.5.Record the results in a table and then draw a graph of  potential difference against current.\nResult\nThe fact that we get a straight line through the origin shows that\nthe potential difference is\ndirectly proportional \nto the current\n(this means that if we double the potential difference, the currentwill double also)");
-        jScrollPane1.setViewportView(stepsarea3);
+        hl3ScrollSteps.setViewportView(stepsarea3);
 
-        getContentPane().add(jScrollPane1);
-        jScrollPane1.setBounds(0, 160, 440, 220);
+        getContentPane().add(hl3ScrollSteps);
+        hl3ScrollSteps.setBounds(0, 160, 440, 220);
 
         Hl3steps.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         Hl3steps.setText("Outline of steps required to conduct experiment. ");
@@ -141,9 +141,9 @@ public class Hl3steps extends javax.swing.JFrame {
     private javax.swing.JLabel Physicstepshead;
     private javax.swing.JButton backEx3step;
     private javax.swing.JLabel backgroundsteps3;
-    private javax.swing.JLabel hl3placeholder;
+    private javax.swing.JScrollPane hl3ScrollSteps;
+    private javax.swing.JLabel hlImage;
     private javax.swing.JButton homeButtonHL;
-    private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextArea stepsarea3;
     // End of variables declaration//GEN-END:variables
 }
