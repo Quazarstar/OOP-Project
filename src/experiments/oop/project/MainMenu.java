@@ -145,19 +145,48 @@ public class MainMenu extends javax.swing.JFrame {
         dispose();}
         else {}
     }//GEN-LAST:event_experimentsButtonActionPerformed
-
+private int cycleSelect = 0;
     private void questionsButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_questionsButtonActionPerformed
-        Controller myC = new Controller();
+  Controller myC = new Controller();
         myC.setArea("Questions");
         myC.writeArea();
         myC.readIn();
         
         /** Once you've added in your own code, delete the calls below **/
-        FormAndQsGUI myMain = new FormAndQsGUI();
-        myMain.setVisible(true);
+        if(myC.getSubject().equals("Biology") && myC.getCycle().equals("Senior Cycle")) {
+        cycleSelect = 1;    
+        BioPg myBiopg = new BioPg();
+        myBiopg.setVisible(true);
         dispose();
+        cycleSelect = 1;   
+        }
+        else if(myC.getSubject().equals("Chemestry") && myC.getCycle().equals("Senior Cycle")){ChemPg myChemPg = new ChemPg();
+        myChemPg.setVisible(true);
+        dispose();
+        cycleSelect = 1;}
+        else if(myC.getSubject().equals("Physics") && myC.getCycle().equals("Senior Cycle")){PhysPg myPhysPg = new PhysPg();
+        myPhysPg.setVisible(true);
+        dispose();
+        cycleSelect = 1;}
+        else if(myC.getSubject().equals("Biology") && myC.getCycle().equals("Junior Cycle")) {BioPg myBiopg = new BioPg();
+        myBiopg.setVisible(true);
+        dispose();
+        cycleSelect = 2;}
+        else if(myC.getSubject().equals("Chemestry") && myC.getCycle().equals("Junior Cycle")) {ChemPg myChemPg = new ChemPg();
+        myChemPg.setVisible(true);
+        dispose();
+        cycleSelect = 2;}
+        else if(myC.getSubject().equals("Physics") && myC.getCycle().equals("Junior Cycle")){PhysPg myPhysPg = new PhysPg();
+        myPhysPg.setVisible(true);
+        dispose();
+        cycleSelect = 2;}
+        else {}
+      
     }//GEN-LAST:event_questionsButtonActionPerformed
-
+public int getCycleSelect(int cycleSelect) {
+        return cycleSelect;
+    }
+   
     /**
      * @param args the command line arguments
      */
@@ -204,3 +233,5 @@ public class MainMenu extends javax.swing.JFrame {
     private javax.swing.JButton toFirstHomeButton;
     // End of variables declaration//GEN-END:variables
 }
+    
+

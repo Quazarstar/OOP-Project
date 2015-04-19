@@ -1,6 +1,6 @@
 package experiments.oop.project;
 
-import experiments.oop.project.FormAndQsGUI;
+import experiments.oop.project.MainMenu;
 
 
 
@@ -16,7 +16,7 @@ import experiments.oop.project.FormAndQsGUI;
  * @author x14435708
  */
 public class BioPg extends javax.swing.JFrame {
-
+MainMenu myMain;
 
     /**
      * Creates new form BioPg
@@ -24,6 +24,7 @@ public class BioPg extends javax.swing.JFrame {
     public BioPg() {
 
         initComponents();
+        this.myMain = new MainMenu();
     }
 
     /**
@@ -124,17 +125,12 @@ public class BioPg extends javax.swing.JFrame {
 
     }//GEN-LAST:event_qButtonActionPerformed
 int Bclicked = 0;
+int cycleSelect = 0;
     private void cbtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbtnActionPerformed
         // TODO add your handling code here:     
-Bclicked++;
-int Bcount = 0;
-while(Bcount <= Bclicked){
-      
-       if(Bclicked==1){
-       pic.setVisible(false);
-       LTitle.setVisible(false);
-       LTopic.setVisible(false);
-LField.setText("Biology theory\n" +
+       myMain.getCycleSelect(cycleSelect);
+        String blessonTxt[] = new String[4];
+        blessonTxt[1]="Biology theory\n" +
 "\n" +
 "Topic: photosynthesis \n" + "\n"
 + "Photosynthesis is the process of converting light energy to "
@@ -143,10 +139,8 @@ LField.setText("Biology theory\n" +
         + "\n Light is actually energy, electromagnetic energy to be "
         + "\n exact. When that energy gets to a green plant, all sorts "
         + "\n of reactions can take place to store energy in the "
-        + "\n form of sugar molecules. ");
-        }
-        else if(Bclicked == 2){
-        LField.setText("Biology theory\n" +
+        + "\n form of sugar molecules. ";
+        blessonTxt[2]="Biology theory\n" +
 "\n" +
 "Topic: photosynthesis part 2 \n" + "\n"
                 + "The cells in plants that give the green color is chloroplasts "
@@ -155,11 +149,8 @@ LField.setText("Biology theory\n" +
                 + "\n the light from the Sun."
                 + "\n"
                 + "\nThe molecules are moved and converted in the area "
-                + "\ncalled the stroma. ");
-        }
-        else{
-            cbtn.setVisible(false);
-        LField.setText("Biology theory\n" +"\n" +
+                + "\ncalled the stroma. ";
+        blessonTxt[3] ="Biology theory\n" +"\n" +
     "Topic: photosynthesis part 3 \n" + "\n"
                     + "\n The whole process doesn't happen all at one time. The"
                     + "\n process of photosynthesis is divided into two main parts."
@@ -168,11 +159,47 @@ LField.setText("Biology theory\n" +
                     + "\n and pushed into a chemical called ATP. The second part of "
                     + "\n the process happens when the ATP is used to make "
                     + "\n glucose (the Calvin Cycle). That second part is called "
-                    + "\n the light independentreaction. "
-        );
+                    + "\n the light independentreaction. ";
+        
+        if(cycleSelect==1){
+Bclicked++;
+int Bcount = 0;
+while(Bcount <= Bclicked){
+      
+       if(Bclicked==1){
+       pic.setVisible(false);
+       LTitle.setVisible(false);
+       LTopic.setVisible(false);
+LField.setText(blessonTxt[1]);
+        }
+        else if(Bclicked == 2){
+        LField.setText(blessonTxt[2]);
+        }
+        else{
+            qButton.setVisible(true);
+            cbtn.setVisible(false);
+        LField.setText(blessonTxt[3]);
         }
   Bcount++;
 }
+        }
+        else if(cycleSelect==2){
+        Bclicked++;
+        int Bcount = 0;
+        while(Bcount <= Bclicked){
+      
+             if(Bclicked==1){
+             pic.setVisible(false);
+                 LTitle.setVisible(false);
+                 LTopic.setVisible(false);
+                    LField.setText(blessonTxt[1]);
+        }
+        else if(Bclicked == 2){
+        LField.setText(blessonTxt[2]);
+        }
+       Bcount++;
+}
+        }
 
 
     }//GEN-LAST:event_cbtnActionPerformed
